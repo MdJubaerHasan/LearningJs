@@ -1,8 +1,8 @@
 // ========================>>> Basics
 
-console.log(`Hello`);
+// console.log(`Hello`);
 // using backticks (known as template literal) is btter than single or double quotes  as they allow injecting variables
-console.log(`I like Pizza`);
+// console.log(`I like Pizza`);
 
 // window.alert(`This is an alert`);
 // window.alert(`I like pizza`);
@@ -116,7 +116,7 @@ document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `; */
     4. addition & ssubstraction
 */
 
-let students = 30;
+/* let students = 30;
 console.log(students);
 
 students = students + 1;
@@ -129,4 +129,22 @@ console.log(students%2);
 console.log(--students);
 
 let result = 1 + 2 * 3 + 4 ** 2;
-console.log(result);
+console.log(result); */
+
+
+// User Input
+
+// 2 way, window prompt, Professional way : HTML textbox
+
+let username;
+
+// username = window.prompt("What's your username");
+
+// console.log(`You are ${username}`);
+
+// The Professional way
+
+document.getElementById("mySubmit").onclick = function(){
+    username = document.getElementById("myText").value;
+    document.getElementById("myH1").textContent = `Hello ${username}`;
+}
