@@ -17,9 +17,9 @@ document.getElementById("myP").textContent = `I like pizza`; */
 
 
 // DATA TYPES
-// # Number
-// # String
-// # Boolean
+// # Number (primitive)
+// # String (referenced)
+// # Boolean (primitive)
 
 
 // Numbers 
@@ -132,19 +132,71 @@ let result = 1 + 2 * 3 + 4 ** 2;
 console.log(result); */
 
 
-// User Input
+// ========================>>> User Input
 
 // 2 way, window prompt, Professional way : HTML textbox
 
-let username;
+/* let username;
 
-// username = window.prompt("What's your username");
+username = window.prompt("What's your username");
 
-// console.log(`You are ${username}`);
+console.log(`You are ${username}`); */
 
 // The Professional way
 
-document.getElementById("mySubmit").onclick = function(){
+/* document.getElementById("mySubmit").onclick = function(){
     username = document.getElementById("myText").value;
     document.getElementById("myH1").textContent = `Hello ${username}`;
+} */
+
+
+// ========================>>> Type Conversion
+
+// change data type to value of another
+
+/* let age = window.prompt("How old are you?");
+age = Number(age);
+
+age +=1;
+
+console.log(age, typeof age);
+
+let x = "pizza";
+let y = "pizza";
+let z = ""; // This will come in handy if userinput is empty
+
+x = Number(x);
+y = String(y);
+z = Boolean(z);
+
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z); */
+
+
+
+// ========================>>> Constants 
+
+// variables that can't be changed
+// A good practice for const is to make all of the letters of that variable uppercase
+// making them uppercase is only valid practice for primitime datatype, number and booleans
+// since string is referenced data type , it doesn't follow that convension 
+
+const PI = 3.14159;
+
+let radius;
+let circumference;
+
+// pi = 4.2; // throws Uncaught TypeError: Assignment to constant variable
+
+/* radius = Number(window.prompt("Enter the radius of the circle"));
+
+circumference = 2*pi*radius;
+window.alert(`The Circumference is ${circumference}`); */
+
+document.getElementById("mySubmit").onclick = function(){
+    radius = document.getElementById("myText").value;
+    circumference = (2*PI*radius);
+    // window.alert(circumference);
+    document.getElementById("myResult").textContent = circumference + " cm";
 }
