@@ -9,8 +9,8 @@ console.log(`I like Pizza`);
 
 // Get the html elemenmts and populate them (h1, p) using JavaScript
 
-document.getElementById("myH1").textContent = `Hello`;
-document.getElementById("myP").textContent = `I like pizza`;
+/* document.getElementById("myH1").textContent = `Hello`;
+document.getElementById("myP").textContent = `I like pizza`; */
 
 
 // ========================>>> Variable
@@ -23,7 +23,8 @@ document.getElementById("myP").textContent = `I like pizza`;
 
 
 // Numbers 
-let x;
+
+/* let x;
 x = 100;
 let age = 25;
 let price = 10.99;
@@ -34,21 +35,21 @@ console.log(age);
 console.log(price);
 console.log(`You are ${age} years old`);
 console.log(`The price is $${price}`);
-console.log(`Your GPA is ${gpa}`);
+console.log(`Your GPA is ${gpa}`); */
 
 // Strings
 
-let firstName = "Bro";
+/* let firstName = "Bro";
 let favoriteFood = "sushi"
 let email = "Bro123@gmail.com"
 console.log(`Your name is ${firstName}`);
 console.log(`Your favorite food is ${favoriteFood}`);
-console.log(`Your email is : ${email}`);
+console.log(`Your email is : ${email}`); */
 
 
 // Booleans
 
-let online = true;
+/* let online = true;
 online = false;
 
 let forSale = true;
@@ -56,23 +57,76 @@ let isStudent = true;
 console.log(online);
 console.log(`Bro is online: ${online}`);
 console.log(`Is This car for sale? : ${forSale}`);
-console.log(`Is Bro a student? : ${isStudent}`);
+console.log(`Is Bro a student? : ${isStudent}`); */
 
 
 // to print a data type of a variable
 
-console.log(typeof age);
+/* console.log(typeof age);
 console.log(typeof price);
 console.log(typeof firstName);
-console.log(typeof online);
+console.log(typeof online); */
 
 
 // Projecting variables in the webpage
 
-let fullName = "Bro Code";
+/* let fullName = "Bro Code";
 let myAge = 26;
 let amIStudnt = false;
 
 document.getElementById("p1").textContent = `Your name is ${fullName}`;
 document.getElementById("p2").textContent = `You are ${age} years old `;
-document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `;
+document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `; */
+
+
+
+// ========================>>> Arithmetic operators
+
+// areithmatic operators = operands (values, variables) operands (+ - / *) ex. 11 = x + 5
+
+// Operators
+// # +
+// # -
+// # *
+// # /
+// # ** (exponent)
+// # % (modulo)
+
+// Instaed of writing the whole variable we can use Augmented assignment operators
+// # +=
+// # -=
+// # /=
+// # *=
+// # **=
+// # %=
+
+// Increament operator
+// # ++
+// # --
+
+// Remember, if you are trying to do multiple operatons , the precedence matters 
+// For example, Studnt = 999, if you do Log(student++), it will first print 999
+// Then it will increament to 1000. So, do ++stuudent.
+
+
+/* Operator precedence
+    1. parenthesis ()
+    2. exponents
+    3. multiplication & division & modulo
+    4. addition & ssubstraction
+*/
+
+let students = 30;
+console.log(students);
+
+students = students + 1;
+console.log(students);
+students -= 1;
+students **= 2;
+console.log(students);
+console.log(students**2);
+console.log(students%2);
+console.log(--students);
+
+let result = 1 + 2 * 3 + 4 ** 2;
+console.log(result);
