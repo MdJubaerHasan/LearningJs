@@ -182,10 +182,10 @@ console.log(z, typeof z); */
 // making them uppercase is only valid practice for primitime datatype, number and booleans
 // since string is referenced data type , it doesn't follow that convension 
 
-const PI = 3.14159;
+/* const PI = 3.14159;
 
 let radius;
-let circumference;
+let circumference; */
 
 // pi = 4.2; // throws Uncaught TypeError: Assignment to constant variable
 
@@ -194,9 +194,11 @@ let circumference;
 circumference = 2*pi*radius;
 window.alert(`The Circumference is ${circumference}`); */
 
-document.getElementById("mySubmit").onclick = function(){
+/* document.getElementById("mySubmit").onclick = function(){
     radius = document.getElementById("myText").value;
     circumference = (2*PI*radius);
     // window.alert(circumference);
     document.getElementById("myResult").textContent = circumference + " cm";
-}
+} */
+
+    
