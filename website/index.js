@@ -201,4 +201,77 @@ window.alert(`The Circumference is ${circumference}`); */
     document.getElementById("myResult").textContent = circumference + " cm";
 } */
 
-    
+
+
+// ========================>>> Math
+
+// it is a built in object that provides a collection of properties and methods
+
+// PI
+
+console.log(Math.PI);
+
+// e ( Euler's Number , base of natural logarithm , used in problems relating to exponential grwoth)
+
+console.log(Math.E);
+
+
+let x = 3.21;
+
+let y = 2;
+
+let z;
+
+let big = 81;
+
+let radian = 45; 
+
+let neg = -3.21;
+
+z = Math.round(x);
+console.log(z);
+
+z = Math.floor(x);
+console.log(z);
+
+z = Math.ceil(x);
+console.log(z);
+
+z = Math.trunc(x); // eliminates decimal points 
+console.log(z);
+
+z = Math.pow(y, y);
+console.log(z);
+
+z = Math.sqrt(big);
+console.log(z);
+
+z = Math.log(big);
+console.log(z);
+
+z = Math.sin(radian);
+console.log(z);
+
+z = Math.cos(radian);
+console.log(z);
+
+z = Math.tan(radian);
+console.log(z);
+
+z = Math.abs(neg);
+console.log(z);
+
+z = Math.sign(neg); // For neg, -1, for pos, 1, for 0, its 0
+console.log(z);
+
+let val1 = 3;
+let val2 = 2;
+let val3 = 1;
+
+let max = Math.max(val1, val2, val3);
+let min = Math.min(val1, val2, val3);
+console.log(max);
+console.log(min);
+
+
+
