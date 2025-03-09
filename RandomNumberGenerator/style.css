@@ -5,3 +5,13 @@ body{
     text-align: center;
 }
 
+#myRoller{
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+    color: #fc0303;
+
+}
+.dice{
+    font-size: 3em;
+}

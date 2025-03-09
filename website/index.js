@@ -207,7 +207,7 @@ window.alert(`The Circumference is ${circumference}`); */
 
 // it is a built in object that provides a collection of properties and methods
 
-// PI
+/* // PI
 
 console.log(Math.PI);
 
@@ -271,7 +271,23 @@ let val3 = 1;
 let max = Math.max(val1, val2, val3);
 let min = Math.min(val1, val2, val3);
 console.log(max);
-console.log(min);
+console.log(min); */
+
+
+// ========================>>> Random Number Generator
+
+// by default, Math.random gives a random number between 0 and 1 with decilam points
+
+// so to get a random number between 0 and X, we need to multiply it 
+
+// however, by default it will return a decilam point number, so use floor or celi
+
+// to increase the lower range simpley add + 1
+
+let randomNum = Math.random() * 6 + 1;
+console.log(randomNum);
+console.log(Math.trunc(randomNum));
+
 
 
 
