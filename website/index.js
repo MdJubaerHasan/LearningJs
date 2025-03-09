@@ -284,10 +284,65 @@ console.log(min); */
 
 // to increase the lower range simpley add + 1
 
-let randomNum = Math.random() * 6 + 1;
+/* let randomNum = Math.random() * 6 + 1;
 console.log(randomNum);
-console.log(Math.trunc(randomNum));
+console.log(Math.trunc(randomNum)); */
 
 
 
+// ========================>>> If else statement
 
+/* let time = 14;
+
+if(time < 12){
+    console.log("Good Morning");
+}else{
+    console.log("Good Afternoon");
+} */
+
+/* let isStudent = false;
+
+if(isStudent){
+    console.log("You are a student");
+}else{
+    console.log("You are not a student");
+} */
+
+/* let age = 25;
+let hasLicense = true;
+
+if(age >= 16){
+
+    console.log("You are old enough to drive");
+    
+    if(hasLicense){
+        console.log("You have a License");
+    }else{
+        console.log("You do not have your license yet");
+    }
+}else{
+    console.log("You are not old enough to drive");
+} */
+
+const myAge = document.getElementById("myText");
+const myButton = document.getElementById("mySubmit");
+const myParagraph = document.getElementById("resultElement");
+let age;
+
+
+myButton.onclick = function(){
+    age = Number(myAge.value);
+
+    if(age < 0){
+        myParagraph.textContent = `Your age can not be bellow zero`;
+    }else if(age == 0){
+        myParagraph.textContent = `Your age can not enter, you are a baby`;
+    }else if(age > 100){
+        myParagraph.textContent = `You are too old to enter this site`;
+    }else if(age >= 18){
+        myParagraph.textContent = `You are old enough to enter this site`;
+    }else{
+        myParagraph.textContent = `You must be 18+ to enter this site`;
+    }
+
+}
