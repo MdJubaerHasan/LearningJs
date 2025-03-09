@@ -346,3 +346,37 @@ myButton.onclick = function(){
     }
 
 } */
+
+
+    // ========================>>> Ternary operator
+
+/*  Ternary operator is a shortcut to simple if and else statrments
+
+    that helps to assign a variable based on a condition 
+
+    example: condition ? codeIfTrue : codeIfFalse; */
+
+/* let age = 9;
+
+let message = age >= 18 ? "You're an adult" : "You're a minor";
+
+console.log(message);
+
+let time = 2;
+
+let greeting = time < 12 ? "Good Morniong!" : "Good Afternoon!";
+
+console.log(greeting);
+
+let isStudent = true;
+
+let studentCheck = isStudent? "You are a student!" : "You are not a student";
+
+console.log(studentCheck);
+
+
+
+let purchaseAmount = 125; // if this is over 100, you get 10% discount
+
+let discount = purchaseAmount >= 100 ? 10 : 0;
+console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))}`); */
