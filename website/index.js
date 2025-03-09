@@ -348,7 +348,9 @@ myButton.onclick = function(){
 } */
 
 
-    // ========================>>> Ternary operator
+// ========================>>> Ternary operator
+
+
 
 /*  Ternary operator is a shortcut to simple if and else statrments
 
@@ -380,3 +382,69 @@ let purchaseAmount = 125; // if this is over 100, you get 10% discount
 
 let discount = purchaseAmount >= 100 ? 10 : 0;
 console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))}`); */
+
+
+// ========================>>> Switch Case
+
+// this should be used for replacing many if - else statements 
+
+let day = 1;
+
+// we will evaluate Day variable
+
+// The bnreak keyword is necessary becasue, unlike if else, once a case is 
+// matched, the subsequent code for other cases will execute as well
+// hence we need to break out of the switch if the case is matched.
+
+switch(day){
+    case 1:
+        console.log("It is Monday");
+        break;
+    case 2:
+        console.log("It is Tuesday");
+        break;
+    case 3:
+        console.log("It is Wednesday");
+        break;
+    case 4:
+        console.log("It is Thursday");
+        break;
+    case 5:
+        console.log("It is Friday");
+        break;
+    case 6:
+        console.log("It is Saturday");
+        break;
+    case 7:
+        console.log("It is Sunday");
+        break;
+    default:
+        console.log(`${day} is not a Day!`);
+}
+
+
+let testScore = 32;
+
+let letterGeade;
+
+// in this following case we are evaluation true ness of the conditional cases
+
+switch(true){
+    case testScore >= 90:
+        letterGeade = "A";
+        break;
+    case testScore >= 80:
+        letterGeade = "B";
+        break;
+    case testScore >= 70:
+        letterGeade = "C";
+        break;
+    case testScore >= 60:
+        letterGeade = "D";
+        break;
+    default:
+        letterGeade = "F";
+        
+}
+
+console.log(letterGeade);
