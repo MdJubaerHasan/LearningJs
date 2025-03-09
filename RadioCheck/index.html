@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">subscribe</label><br><br>
+    <!-- the for attribute allows the chekcbox to be checked if 
+    the label is clicked,given that the value of for is same as
+    id of the checkbox -->
+    
+    <!-- radio buttons should be under a group as only one should be selected
+    at any given time. for this we use name attribute, every radio input have
+    the same name attribute value-->
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label><br>
+    <input type="radio" id="masterCardBtn" name="card">
+    <label for="masterCardBtn">MasterCard</label><br>
+    <input type="radio" id="payPalBtn" name="card">
+    <label for="payPalBtn">PayPal</label><br><br>
+
+    <button type="submit" id="mySubmit">Submit</button> <br>
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+    <script src="index.js"></script>
+</body>
+</html>

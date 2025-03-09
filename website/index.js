@@ -324,7 +324,7 @@ if(age >= 16){
     console.log("You are not old enough to drive");
 } */
 
-const myAge = document.getElementById("myText");
+/* const myAge = document.getElementById("myText");
 const myButton = document.getElementById("mySubmit");
 const myParagraph = document.getElementById("resultElement");
 let age;
@@ -345,4 +345,4 @@ myButton.onclick = function(){
         myParagraph.textContent = `You must be 18+ to enter this site`;
     }
 
-}
+} */
