@@ -454,7 +454,7 @@ console.log(letterGeade); */
 
 // allows us to work with texts, manipulate.
 
-let userName = "1 Bro Code 2 \n \n";
+/* let userName = "1 Bro Code 2 \n \n";
 
 console.log(userName);
 // let userName = "oooooooooo"
@@ -531,4 +531,43 @@ console.log(phoneNumber.replaceAll("-", "/"));
 // .padEnd and pad start are as their name
 
 console.log(phoneNumber.padStart(15, "0"));
-console.log(phoneNumber.padEnd(15,"0"));
+console.log(phoneNumber.padEnd(15,"0")); */
+
+
+
+// ========================>>> String Slicing 
+
+// it is a method for creating a substring from a portion of another string
+
+// string.slice(start, end); the ending index is exclusive
+
+const fullName = "Bro Code";
+
+/* let firstName = fullName.slice(0,4);
+let lastName = fullName.slice(4, fullName.length); // same as lastName = fullName.slice(4), will get all the way to the end
+
+
+console.log(firstName);
+console.log(lastName);
+
+let firstChar = fullName.slice(0, 1);
+console.log(firstChar);
+let lastChar = fullName.slice(-1); // - 2 would get the second index from the last and also -1
+console.log(lastChar); */
+
+/* // lets make a dynamic way to extract first and last name from a string based on space
+
+
+let firstname = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" "), fullName.length).trim();
+console.log(firstname);
+console.log(lastName); */
+
+
+const email = "Bro1@gmail.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let extention = email.slice(email.indexOf("@")+1);
+
+console.log(username);
+console.log(extention);
