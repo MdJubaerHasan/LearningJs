@@ -541,7 +541,7 @@ console.log(phoneNumber.padEnd(15,"0")); */
 
 // string.slice(start, end); the ending index is exclusive
 
-const fullName = "Bro Code";
+// const fullName = "Bro Code";
 
 /* let firstName = fullName.slice(0,4);
 let lastName = fullName.slice(4, fullName.length); // same as lastName = fullName.slice(4), will get all the way to the end
@@ -563,11 +563,35 @@ let lastName = fullName.slice(fullName.indexOf(" "), fullName.length).trim();
 console.log(firstname);
 console.log(lastName); */
 
-
+/* 
 const email = "Bro1@gmail.com";
 
 let username = email.slice(0, email.indexOf("@"));
 let extention = email.slice(email.indexOf("@")+1);
 
 console.log(username);
-console.log(extention);
+console.log(extention); */
+
+
+// ========================>>> Method Chaining
+
+// calling one methode after another using . dot 
+
+let userName  = window.prompt("Enter you username");
+
+// ----- No Chain 
+
+/* userName = userName.trim();
+let letter = userName.charAt(0);
+letter = letter.toUpperCase();
+let extraChar = userName.slice(1);
+extraChar = extraChar.toLowerCase();
+userName = letter + extraChar; */
+
+
+//// ------ Chain
+
+userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+
+
+console.log(userName);
