@@ -388,7 +388,7 @@ console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))
 
 // this should be used for replacing many if - else statements 
 
-let day = 1;
+// let day = 1;
 
 // we will evaluate Day variable
 
@@ -396,7 +396,7 @@ let day = 1;
 // matched, the subsequent code for other cases will execute as well
 // hence we need to break out of the switch if the case is matched.
 
-switch(day){
+/* switch(day){
     case 1:
         console.log("It is Monday");
         break;
@@ -447,4 +447,88 @@ switch(true){
         
 }
 
-console.log(letterGeade);
+console.log(letterGeade); */
+
+
+// ========================>>> String
+
+// allows us to work with texts, manipulate.
+
+let userName = "1 Bro Code 2 \n \n";
+
+console.log(userName);
+// let userName = "oooooooooo"
+
+// useing .charAt() will return a character at a given index
+
+console.log(userName.charAt(3));
+
+// uisng .indexOf() will return the idex of the first occurance of a character
+
+console.log(userName.indexOf("o"));
+
+// uisng .lastIndexOf() returns the idex of the last ocuurance of a character
+
+console.log(userName.lastIndexOf("o"));
+
+// using .lenth returns the total number of character
+
+console.log(userName.length);
+
+// uisng .trim() removes whitespaces , both before and after
+
+console.log(userName.trim());
+
+// to set the characters of the string to uppser case, use .toUpperCase()
+// this ignores not alphabetic or already uppercase letters 
+
+console.log(userName.toUpperCase());
+
+// to set the characters of the string to lower case, use .toLowerCase()
+
+console.log(userName.toLowerCase());
+
+// to repeat a string, use .repeat()
+
+console.log(userName.repeat(5))
+
+// to check if a string starts with a certain character, use .starstWith(), returns bool
+
+console.log(userName.startsWith(" "));
+
+// a sample use case where username is written with empty space
+
+if (userName.startsWith(" ")) {
+    console.log("You name can't start with empty space");
+} else {
+    console.log(userName);
+}
+
+// to check if a string ends with a certain character, use .endstWith()
+
+if (userName.endsWith("\n")) {
+    console.log("You name can't end with empty space");
+} else {
+    console.log(userName);
+}
+
+// if a string includes a certain character, use .includes()
+
+if (userName.includes(" ")) {
+    console.log("You name can't have empty space");
+} else {
+    console.log(userName);
+}
+
+// replace certain character with something ,use .replceAll()
+
+let phoneNumber = "123-456-7890";
+
+console.log(phoneNumber.replaceAll("-", "/"));
+
+
+// .padStart(Value, padWith) this pads strings to certain length by adding the padwith character
+// .padEnd and pad start are as their name
+
+console.log(phoneNumber.padStart(15, "0"));
+console.log(phoneNumber.padEnd(15,"0"));
