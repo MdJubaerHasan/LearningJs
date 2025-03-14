@@ -652,7 +652,7 @@ if (PI !== "3.14") {
 
 //// reapeat some code WHILE some condition is true
 
-let userName = "";
+// let userName = "";
 
 /* while(userName === "" || userName === null) {
     console.log("You did not enter your username");
@@ -660,7 +660,7 @@ let userName = "";
 }
 console.log(userName); */
 
-let loggedIn = true;
+/* let loggedIn = true;
 let user;
 let password;
 
@@ -673,4 +673,23 @@ do{
     }else{
         console.log("Invalid credential, please try again");
     }
-}while(!loggedIn)
+}while(!loggedIn) */
+
+
+// ========================>>> For Loop
+
+// repeat some code limited amount of times 
+
+/* for (let i = 10; i > 0; i--) {
+    console.log(i);
+}
+console.log("WOW!"); */
+
+/* for (let i = 0; i <= 20; i++) {
+    if(i === 13){
+        break;
+    }else if(i === 11){
+        continue;
+    }
+    console.log(i);
+} */
