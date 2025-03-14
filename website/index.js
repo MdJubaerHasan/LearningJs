@@ -597,11 +597,11 @@ userName = letter + extraChar; */
 console.log(userName);  */
 
 
-// ========================>>> Logicalk operator
+// ========================>>> Logical operator
 
 // , AND &&, OR || , NOT ! , used for combining boolean values (true and false)
 
-const temp = 200;
+/* const temp = 200;
 
 if (temp > 0 && temp <= 30) {
     console.log("Weahter is good");
@@ -622,4 +622,28 @@ if (!isSunny) {
     console.log("It is not sunny");
 } else {
     console.log("It is sunny");
+} */
+
+
+// ========================>>> Strict Equality
+
+//// = assignment operator
+//// == comparison operator (compare if values are equal)
+//// === strict equality operator (compare if values and data types are equal)
+//// != inequality operator
+//// !== strict inequality operator
+
+
+const PI = 3.14;
+
+if (PI === "3.14") {
+    console.log("That is PI");
+}else{
+    console.log("That is not PI");
+}
+
+if (PI !== "3.14") {
+    console.log("This is NOT PI");
+} else {
+    console.log("This is PI");
 }
