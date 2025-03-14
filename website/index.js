@@ -575,7 +575,7 @@ console.log(extention); */
 
 // ========================>>> Method Chaining
 
-// calling one methode after another using . dot 
+/* // calling one methode after another using . dot 
 
 let userName  = window.prompt("Enter you username");
 
@@ -591,7 +591,35 @@ userName = letter + extraChar; */
 
 //// ------ Chain
 
-userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+/* userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
 
 
-console.log(userName);
+console.log(userName);  */
+
+
+// ========================>>> Logicalk operator
+
+// , AND &&, OR || , NOT ! , used for combining boolean values (true and false)
+
+const temp = 200;
+
+if (temp > 0 && temp <= 30) {
+    console.log("Weahter is good");
+}else{
+    console.log("Weahter is bad");
+}
+
+
+if (temp <= 0 || temp >= 30) {
+    console.log("Weahter is actually bad");
+}else{
+    console.log("Weahter is actually good");
+}
+
+const isSunny = true;
+
+if (!isSunny) {
+    console.log("It is not sunny");
+} else {
+    console.log("It is sunny");
+}
