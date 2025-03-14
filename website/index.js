@@ -634,7 +634,7 @@ if (!isSunny) {
 //// !== strict inequality operator
 
 
-const PI = 3.14;
+/* const PI = 3.14;
 
 if (PI === "3.14") {
     console.log("That is PI");
@@ -646,4 +646,31 @@ if (PI !== "3.14") {
     console.log("This is NOT PI");
 } else {
     console.log("This is PI");
+} */
+
+// ========================>>> While Loop
+
+//// reapeat some code WHILE some condition is true
+
+let userName = "";
+
+/* while(userName === "" || userName === null) {
+    console.log("You did not enter your username");
+    userName = window.prompt("Enter username");
 }
+console.log(userName); */
+
+let loggedIn = true;
+let user;
+let password;
+
+do{
+    user = window.prompt("Enter you name");
+    password = window.prompt("Enter you password");
+    if (user === "myUsername" && password === "myPassword") {
+        loggedIn = true;
+        console.log("You have logged in");    
+    }else{
+        console.log("Invalid credential, please try again");
+    }
+}while(!loggedIn)
