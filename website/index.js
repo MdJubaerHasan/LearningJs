@@ -693,3 +693,51 @@ console.log("WOW!"); */
     }
     console.log(i);
 } */
+
+// ========================>>> Functions
+
+//// a section of resuable code, declare once , use on demand, call to execute
+let user = "Meow";
+let age = 69;
+
+
+function happyBirthday(username, age){ // username, age is parameter
+    console.log("Happy birthday to you!");
+    console.log(`You are awesome ${username}, you just turned ${age}`);
+}
+
+//// arguments must match the order of the parameters
+
+happyBirthday(user, age); // user, age is argument 
+
+happyBirthday("SpongeBob", 30);
+
+function add(x, y){
+    return x+y;
+}
+
+function substract(x, y){
+    return x-y;
+}
+
+function multiply(x,y){
+    return x*y;
+}
+function devide(x,y){
+    return x/y;
+}
+
+function isEven(x){
+    return x%2 === 0 ? true : false;
+}
+
+function isValidEmail(email){
+    return email.includes("@") ? true : false;
+}
+console.log(add(2,3));
+console.log(substract(2,3));
+console.log(multiply(2,3));
+console.log(devide(2,3));
+console.log(isEven(14));
+
+console.log(isValidEmail("meow@booboob.com"));
