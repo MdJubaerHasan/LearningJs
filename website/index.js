@@ -697,7 +697,7 @@ console.log("WOW!"); */
 // ========================>>> Functions
 
 //// a section of resuable code, declare once , use on demand, call to execute
-let user = "Meow";
+/* let user = "Meow";
 let age = 69;
 
 
@@ -740,4 +740,48 @@ console.log(multiply(2,3));
 console.log(devide(2,3));
 console.log(isEven(14));
 
-console.log(isValidEmail("meow@booboob.com"));
+console.log(isValidEmail("meow@booboob.com")); */
+
+
+// ========================>>> Variable Scope
+
+//// variable scope = where a variable is recognized and accessible
+//// local vs global
+
+let x = 1;
+//let x = 2; 
+//// declaring x will produce and error, because they are in the same scrope;
+
+//// anytime a varibale is declared within a set of {}, it is in a local scope;
+function function1(){
+    let x = 1;
+    console.log(x);
+}
+
+function function2(){
+    let x = 2;
+    console.log(x);
+}
+function1();
+function2();
+
+//// above, there are no errors as both 'x' are within different scopes;
+
+//// gloabl scope is, a variable declared outside {} and outside function
+
+//// if variable with same name available in both scopes, local one will be selected
+
+
+let y = "Globally Available";
+
+function function3(){
+    const y = "Locally Available";
+    console.log(y);
+}
+function function4(){
+    y = "Modified global"
+    console.log(y);
+}
+
+function3();
+function4();
