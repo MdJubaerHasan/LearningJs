@@ -785,3 +785,80 @@ function function4(){
 
 function3();
 function4(); */
+
+// ========================>>> Arrays
+
+//// a variable like structure that can hold more than 1 value
+//// always starts with zero 
+let fruits = ["apple", "orange", "banana"];
+console.log(fruits);
+console.log(fruits[2]);
+
+//// to change a value in a certain index 
+
+fruits[0] = "coconut";
+console.log(fruits);
+
+//// we can add element using built in .push() method, adds at the end
+
+fruits.push("apple");
+console.log(fruits);
+
+//// .pop() removes the last element of the array
+
+fruits.pop();
+console.log(fruits);
+
+//// .unshift() method adds an element at the begining of the array
+
+fruits.unshift("mango");
+console.log(fruits);
+
+//// to remove the front element , use .shift() method
+
+fruits.shift();
+console.log(fruits);
+
+//// to get length of the array , use .length
+
+let numOfFruits = fruits.length;
+console.log(`Number of fruits: ${numOfFruits}`);
+
+//// find index of an element if matched , using .indexOf()
+
+let index = fruits.indexOf("banana");
+console.log(`Index of Banana: ${index}`);
+
+index = fruits.indexOf("mango");
+console.log(`Index of Mango: ${index}`);
+
+//// if indexOf returns -1, means the element doesn't exist
+
+//// using for loop to loop through array 
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+    
+}
+console.log("\n");
+
+for (let i = fruits.length-1; i >= 0; i--) {
+    console.log(fruits[i]);
+}
+
+console.log("\n");
+
+//// enhanced for loop
+
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+
+//// to sort an array, use .sort(). For this, it will sort alphabetically
+
+fruits.sort();
+console.log(fruits);
+
+//// sort reverse, use .reverse()
+fruits.sort().reverse();
+console.log(fruits);
