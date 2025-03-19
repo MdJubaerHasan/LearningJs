@@ -745,7 +745,7 @@ console.log(isValidEmail("meow@booboob.com")); */
 
 // ========================>>> Variable Scope
 
-//// variable scope = where a variable is recognized and accessible
+/* //// variable scope = where a variable is recognized and accessible
 //// local vs global
 
 let x = 1;
@@ -784,4 +784,4 @@ function function4(){
 }
 
 function3();
-function4();
+function4(); */
