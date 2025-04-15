@@ -788,7 +788,7 @@ function4(); */
 
 // ========================>>> Arrays
 
-//// a variable like structure that can hold more than 1 value
+/* //// a variable like structure that can hold more than 1 value
 //// always starts with zero 
 let fruits = ["apple", "orange", "banana"];
 console.log(fruits);
@@ -861,4 +861,89 @@ console.log(fruits);
 
 //// sort reverse, use .reverse()
 fruits.sort().reverse();
-console.log(fruits);
+console.log(fruits); */
+
+// ========================>>> Spread Operators
+
+//// Spread operator ( ... ) allows an iterable such as an array or string
+// /* //// to be expanded into seperate elements (unpack the element)
+
+// let numbers = [1,2,3,4,5];
+
+// console.log(numbers);
+
+// // let maximum = Math.max(numbers); // this will produce NaN
+// let maximum = Math.max(...numbers);
+// console.log(maximum);
+// let minimum = Math.min(...numbers);
+// console.log(minimum);
+
+// let username = "Bro Code";
+// let letters = [... username].join('-');
+// console.log(letters);
+
+// let fruits = ["apple", "banana", "orange"];
+
+// //// we can create a shallow copy of this array using spread operator
+// //// shallow copy is a different data structure, contains identical values
+// /// 
+// let newFruits = [...fruits,"milk"];
+// console.log(newFruits);
+
+// newFruits[0] = "avocado";
+
+// console.log(fruits);
+// console.log(newFruits); */
+
+// ========================>>> rest parameters
+
+// rest parameters = (...rest) alllow a function work with a variable number
+//  of arguements bundling them into an array 
+
+// spread op = expands an array into seperate elements
+// rest op = bundles seperate elements into an array 
+
+function openFridge(...foods){
+    console.log(foods);
+}
+
+const food1 = "pizza";
+const food2 = "hamburger";
+const food3 = "hotfog";
+const food4 = "sushi";
+const food5 = "ramen";
+
+openFridge(food1, food2, food3, food4, food5);
+
+function sum(...numbers){
+    let result = 0;
+    for( let number of numbers){
+        result += number;
+    }
+    return result;
+}
+
+const total = sum(1,2,3,4,5);
+console.log(`Your total is $${total}`);
+
+function getAverage(...numbers){
+    let result = 0;
+    for(let number of numbers){
+        result += number;
+    }
+    return result/numbers.length;
+}
+const totalAverage  = getAverage(1,2,3,4,5,6);
+console.log(`Your average is $${totalAverage}`);
+
+function combineStrings(...strings){
+    return strings.join(" ");
+}
+const fullName = combineStrings("Mr.", "Spongebob", "SquarePants", "III");
+console.log(fullName);
+
+
+
+
+
+
