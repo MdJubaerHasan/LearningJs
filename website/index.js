@@ -897,7 +897,7 @@ console.log(fruits); */
 
 // ========================>>> rest parameters
 
-// rest parameters = (...rest) alllow a function work with a variable number
+/* // rest parameters = (...rest) alllow a function work with a variable number
 //  of arguements bundling them into an array 
 
 // spread op = expands an array into seperate elements
@@ -941,7 +941,7 @@ function combineStrings(...strings){
 }
 const fullName = combineStrings("Mr.", "Spongebob", "SquarePants", "III");
 console.log(fullName);
-
+ */
 
 
 
