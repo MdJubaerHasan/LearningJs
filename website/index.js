@@ -947,19 +947,19 @@ console.log(fullName);
 
 // ========================>>> Callback
 
-//// Callback = a function that is passed as an argument to another function
+/* //// Callback = a function that is passed as an argument to another function
 
 //// callback is used to handle asynchronous operations:
 //// 1. Reading a file
 //// 2. Network requests
 //// 3. Interacting with database  
 
-/* hello(goodbye);
-wait(leave);
-leave(goodbye);
-hello(wait(leave(goodbye))); 
-//// we cant do these becasue the funtions don't have return value
-*/
+// hello(goodbye);
+// wait(leave);
+// leave(goodbye);
+// hello(wait(leave(goodbye))); 
+// //// we cant do these becasue the funtions don't have return value
+
 
 //// Proper Chaining
 
@@ -1007,4 +1007,64 @@ function displayDOM(result){
 }
 
 sum(displayConsole, 1, 2);
-sum(displayDOM, 1, 2);
+sum(displayDOM, 1, 2); */
+
+
+// ========================>>> For Each
+
+//// forEach() = method used to iterate over the elements
+////            of am array and apply a specified function(callback)
+////            to each element
+
+////            array.forEach(callback)
+
+let numbers = [1,2,3,4,5];
+
+function display(element){
+    console.log(element);
+}
+
+function double(element, index, array){
+    array[index] = element * 2;
+}
+
+function square(element, index, array){
+    array[index] = Math.pow(element,2);
+}
+
+
+numbers.forEach(display);
+
+numbers.forEach(double);
+
+numbers.forEach(display);
+
+numbers.forEach(square);
+
+numbers.forEach(display);
+
+let fruits= ["apple", "orange", "banana", "coconut"];
+
+function displayFruits(elemenmts){
+    console.log(elemenmts);
+}
+
+function upperCase(element, index, array){
+    array[index] = element.toUpperCase();
+}
+
+function lowerCase(element, index, array){
+    array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array){
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
+
+
+fruits.forEach(upperCase);
+fruits.forEach(displayFruits);
+fruits.forEach(lowerCase);
+fruits.forEach(displayFruits);
+fruits.forEach(capitalize);
+fruits.forEach(displayFruits);
