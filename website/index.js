@@ -1012,7 +1012,7 @@ sum(displayDOM, 1, 2); */
 
 // ========================>>> For Each
 
-//// forEach() = method used to iterate over the elements
+/* //// forEach() = method used to iterate over the elements
 ////            of am array and apply a specified function(callback)
 ////            to each element
 
@@ -1067,4 +1067,63 @@ fruits.forEach(displayFruits);
 fruits.forEach(lowerCase);
 fruits.forEach(displayFruits);
 fruits.forEach(capitalize);
-fruits.forEach(displayFruits);
+fruits.forEach(displayFruits); */
+
+
+// ========================>>> Map
+
+//// .map() = accepts a callback and applies that function to
+////          each element of an array, then return a new array
+
+const numbers = [1, 2, 3, 4, 5];
+
+function square(elemenmt){
+    return Math.pow(elemenmt, 2);
+}
+
+function cube(elemenmt){
+    return Math.pow(elemenmt, 3);
+}
+
+const squares = numbers.map(square);
+
+console.log(squares);
+
+const cubes = numbers.map(cube);
+
+console.log(cubes);
+
+
+//// The key differnece between .map and .forEach is , map returns a 
+//// new array, keeps the original unchanged, while forEach chnages the
+//// original array
+
+
+const students = ["Spongebob", "Patrick", "Squidward", "Sandy"];
+
+function upperCase(elemenmt){
+    return elemenmt.toUpperCase();
+}
+
+function lowerCase(elemenmt){
+    return elemenmt.toLowerCase();
+}
+
+const studentsUpper = students.map(upperCase);
+const studentsLower = students.map(lowerCase);
+
+console.log(students);
+console.log(studentsUpper);
+console.log(studentsLower);
+
+
+//// another example
+
+const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+
+console.log(dates.map(formatDates));
+
+function formatDates(elemenmt){
+    const parts = elemenmt.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
