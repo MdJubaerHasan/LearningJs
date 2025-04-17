@@ -945,5 +945,66 @@ console.log(fullName);
 
 
 
+// ========================>>> Callback
+
+//// Callback = a function that is passed as an argument to another function
+
+//// callback is used to handle asynchronous operations:
+//// 1. Reading a file
+//// 2. Network requests
+//// 3. Interacting with database  
+
+/* hello(goodbye);
+wait(leave);
+leave(goodbye);
+hello(wait(leave(goodbye))); 
+//// we cant do these becasue the funtions don't have return value
+*/
+
+//// Proper Chaining
+
+hello(() => 
+    wait(() =>
+        leave(() =>
+            goodbye()
+        )
+    )
+);
+
+function hello(callback){
+    console.log("Hello!");
+    callback();
+}
+
+function leave(callback){
+    console.log("Leave!");
+    callback();
+}
+
+function wait(callback){
+    console.log("Wait!");
+    callback();
+}
+
+function goodbye(){
+    console.log("Goodbye!"); 
+}
+
+//// second example
+
+function sum(callback, x, y){
+    let result = x+y;
+    callback(result);
+}
+
+function displayConsole(result){
+    console.log(result);
+}
 
 
+function displayDOM(result){
+    document.getElementById("myH1").textContent = result;
+}
+
+sum(displayConsole, 1, 2);
+sum(displayDOM, 1, 2);
