@@ -1072,7 +1072,7 @@ fruits.forEach(displayFruits); */
 
 // ========================>>> Map
 
-//// .map() = accepts a callback and applies that function to
+/* //// .map() = accepts a callback and applies that function to
 ////          each element of an array, then return a new array
 
 const numbers = [1, 2, 3, 4, 5];
@@ -1126,4 +1126,60 @@ console.log(dates.map(formatDates));
 function formatDates(elemenmt){
     const parts = elemenmt.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
+} */
+
+
+// ========================>>> Filter
+
+//// .filter() = creates a new array by filtering out elements
+
+let numbers = [1,2,3,4,5,6,7];
+
+function isEven(element){
+    return element%2 === 0;
 }
+
+function isOdd(element){
+    return element%2 !== 0;
+}
+
+let evenNumbs = numbers.filter(isEven);
+let oddNumbs = numbers.filter(isOdd);
+
+console.log(evenNumbs);
+
+console.log(oddNumbs);
+
+
+const ages = [16, 17, 18, 18, 19, 20, 60];
+
+function isAdult(element){
+    return element >= 18;
+}
+
+function isMinor(element){
+    return element < 18;
+}
+
+const adults = ages.filter(isAdult);
+const minors = ages.filter(isMinor);
+console.log(adults);
+console.log(minors);
+
+
+const words = ["apple", "orange", "banana", "kiwi", "pomegranate", "coconut"];
+
+function getShortWords(element){
+    return element.length <= 6;
+}
+
+function getLongWords(element){
+    return element.length > 6;
+}
+
+const shortWords = words.filter(getShortWords);
+const longWords = words.filter(getLongWords);
+console.log(shortWords);
+console.log(longWords);
+
+
