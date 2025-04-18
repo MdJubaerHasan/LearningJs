@@ -7,7 +7,7 @@
 // window.alert(`This is an alert`);
 // window.alert(`I like pizza`);
 
-// Get the html elemenmts and populate them (h1, p) using JavaScript
+// Get the html elements and populate them (h1, p) using JavaScript
 
 /* document.getElementById("myH1").textContent = `Hello`;
 document.getElementById("myP").textContent = `I like pizza`; */
@@ -1045,8 +1045,8 @@ numbers.forEach(display);
 
 let fruits= ["apple", "orange", "banana", "coconut"];
 
-function displayFruits(elemenmts){
-    console.log(elemenmts);
+function displayFruits(elements){
+    console.log(elements);
 }
 
 function upperCase(element, index, array){
@@ -1077,12 +1077,12 @@ fruits.forEach(displayFruits); */
 
 const numbers = [1, 2, 3, 4, 5];
 
-function square(elemenmt){
-    return Math.pow(elemenmt, 2);
+function square(element){
+    return Math.pow(element, 2);
 }
 
-function cube(elemenmt){
-    return Math.pow(elemenmt, 3);
+function cube(element){
+    return Math.pow(element, 3);
 }
 
 const squares = numbers.map(square);
@@ -1101,12 +1101,12 @@ console.log(cubes);
 
 const students = ["Spongebob", "Patrick", "Squidward", "Sandy"];
 
-function upperCase(elemenmt){
-    return elemenmt.toUpperCase();
+function upperCase(element){
+    return element.toUpperCase();
 }
 
-function lowerCase(elemenmt){
-    return elemenmt.toLowerCase();
+function lowerCase(element){
+    return element.toLowerCase();
 }
 
 const studentsUpper = students.map(upperCase);
@@ -1123,15 +1123,15 @@ const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
 
 console.log(dates.map(formatDates));
 
-function formatDates(elemenmt){
-    const parts = elemenmt.split("-");
+function formatDates(element){
+    const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 } */
 
 
 // ========================>>> Filter
 
-//// .filter() = creates a new array by filtering out elements
+/* //// .filter() = creates a new array by filtering out elements
 
 let numbers = [1,2,3,4,5,6,7];
 
@@ -1180,6 +1180,38 @@ function getLongWords(element){
 const shortWords = words.filter(getShortWords);
 const longWords = words.filter(getLongWords);
 console.log(shortWords);
-console.log(longWords);
+console.log(longWords); */
 
 
+// ========================>>> Reduce
+
+//// .reduce() = reduce the elements of an array to a single value
+
+const prices = [5, 30, 10, 25, 15, 20];
+
+const total = prices.reduce(sum);
+
+function sum(previous, next){
+    return previous + next;
+}
+
+console.log(`Yout total is ${total} pounds`);
+
+
+const grades = [75, 50, 90, 80, 65, 95];
+
+const maximum = grades.reduce(getMax);
+
+function getMax(accumulator, element){
+    return Math.max(accumulator, element);
+}
+
+console.log(maximum);
+
+function getMin(accumulator, element){
+    return Math.min(accumulator, element);
+}
+
+const minimum = grades.reduce(getMin);
+
+console.log(minimum);
