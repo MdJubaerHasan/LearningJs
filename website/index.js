@@ -1285,7 +1285,7 @@ console.log(total);
 
 // ========================>>> Arrow Functions
 
-//// arrow function = a concise way to write function expressions
+/* //// arrow function = a concise way to write function expressions
 ////                  good for simple functions that you use only once
 ////                  (parameters) => some code
 
@@ -1312,4 +1312,44 @@ console.log(numbers.map((element) => Math.pow(element, 2)));
 
 console.log(numbers.filter((element) => element%2===0));
 console.log(numbers.filter((element) => element%2 !== 0));
-console.log(numbers.reduce((accumulator, element) => accumulator + element));
+console.log(numbers.reduce((accumulator, element) => accumulator + element)); */
+
+
+// ========================>>> JavaScript Objects
+
+//// object = a collection of related properties and/or methods
+////          Can represent real world objects (people, products, places)
+////          object = {
+////                key: value
+////                function()             
+////           }
+
+const person1 = {
+    firstname: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed : true,
+    sayHello: () => console.log("Hello!, I am Spongebob."),
+    eat: () => console.log("I am eating a Krabby Patty"),
+}
+
+console.log(person1.firstname);
+console.log(person1.lastName);
+console.log(person1.isEmployed);
+person1.sayHello();
+person1.eat();
+
+const person2 = {
+    firstname: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed : false,
+    sayHello: () => console.log("Hello!, I am Patrick."),
+    eat: () => console.log("I am eating roast beef, chicken and pizza"),
+}
+
+console.log(person2.firstname);
+console.log(person2.lastName);
+console.log(person2.age);
+person2.sayHello();
+person2.eat();
