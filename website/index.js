@@ -1317,7 +1317,7 @@ console.log(numbers.reduce((accumulator, element) => accumulator + element)); */
 
 // ========================>>> JavaScript Objects
 
-//// object = a collection of related properties and/or methods
+/* //// object = a collection of related properties and/or methods
 ////          Can represent real world objects (people, products, places)
 ////          object = {
 ////                key: value
@@ -1352,4 +1352,40 @@ console.log(person2.firstname);
 console.log(person2.lastName);
 console.log(person2.age);
 person2.sayHello();
+person2.eat(); */
+
+// ========================>>> THIS
+
+//// this = reference to the object where THIS is used
+////        (the object depends on the immediate context) 
+////        person.name = this.name
+
+
+const person1 = {
+    name: "Spongebob",
+    faveFood : "hamburgers",
+    sayHello: function(){
+        console.log(`Hi, I am ${this.name}`);
+    },
+    eat: function(){console.log(`${this.name} is eating ${this.faveFood}`)},
+}
+
+person1.sayHello();
+person1.eat();
+
+const person2 = {
+    name: "Patrick",
+    faveFood : "Pizza",
+    sayHello: function(){
+        console.log(`Hi, I am ${this.name}`);
+    },
+    eat: function(){console.log(`${this.name} is eating ${this.faveFood}`)},
+}
+person2.sayHello();
 person2.eat();
+
+
+//// By default we are inside a window object, so if we use 
+//// this outside the person object, we will invoke the global 
+//// window object
+// console.log(this);
