@@ -1185,7 +1185,7 @@ console.log(longWords); */
 
 // ========================>>> Reduce
 
-//// .reduce() = reduce the elements of an array to a single value
+/* //// .reduce() = reduce the elements of an array to a single value
 
 const prices = [5, 30, 10, 25, 15, 20];
 
@@ -1214,4 +1214,65 @@ function getMin(accumulator, element){
 
 const minimum = grades.reduce(getMin);
 
-console.log(minimum);
+console.log(minimum); */
+
+// ========================>>> Function Expressions 
+
+//// function declaration = define a reusable block of code
+////                        that performs a specific task
+
+
+// function hello(){
+//     console.log("hello!");
+// }
+
+//// function expressions = a way to define functions as values 
+////                        or variables 
+
+const hello = function(){
+    console.log("Hello!")
+}
+
+hello();
+
+setTimeout(hello, 3000);
+
+setTimeout(function(){
+    console.log("Hello Again!")
+}, 3000);
+
+const numbers = [1,2,3,4,5,6];
+
+function square(element){
+    return Math.pow(element, 2);
+}
+
+const squares = numbers.map(square);
+
+console.log(squares);
+
+//// using function expression
+
+const cubes = numbers.map(function(element){
+   return Math.pow(element, 3); 
+});
+
+console.log(cubes);
+
+const evenNumbs = numbers.filter(function(element){
+    return element%2 === 0;
+});
+
+console.log(evenNumbs);
+
+const oddNumbs = numbers.filter(function(element){
+    return element%2 !== 0;
+});
+
+console.log(oddNumbs);
+
+const total = numbers.reduce(function(accumulator, element){
+    return accumulator+element;
+});
+
+console.log(total);
