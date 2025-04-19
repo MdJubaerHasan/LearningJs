@@ -1356,7 +1356,7 @@ person2.eat(); */
 
 // ========================>>> THIS
 
-//// this = reference to the object where THIS is used
+/* //// this = reference to the object where THIS is used
 ////        (the object depends on the immediate context) 
 ////        person.name = this.name
 
@@ -1389,3 +1389,30 @@ person2.eat();
 //// this outside the person object, we will invoke the global 
 //// window object
 // console.log(this);
+//// *** this keyword does not work with Arrow Function, it inviokes 
+//// *** the global window object */
+
+
+// ========================>>> Constructor
+
+//// constructor = special method for defining the 
+////               properties and method of objects
+
+function Car(make, model, year, color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color,
+
+    this.drive = function(){console.log(`You drive the ${this.model}`)}
+}
+
+const car1 = new Car("Ford", "Mustang", 2024, "Red");
+
+console.log(car1.make);
+car1.drive();
+
+const car2 = new Car("Chevrolet", "Camaro", 2025, "Blue");
+
+console.log(car2.make);
+car2.drive();
