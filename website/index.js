@@ -1218,7 +1218,7 @@ console.log(minimum); */
 
 // ========================>>> Function Expressions 
 
-//// function declaration = define a reusable block of code
+/* //// function declaration = define a reusable block of code
 ////                        that performs a specific task
 
 
@@ -1276,3 +1276,40 @@ const total = numbers.reduce(function(accumulator, element){
 });
 
 console.log(total);
+
+//// benefits :
+//// 1. Callbacks in asynchronous operations 
+//// 2. Higher-order functions
+//// 3. Closures
+//// 4. Event Listeners */
+
+// ========================>>> Arrow Functions
+
+//// arrow function = a concise way to write function expressions
+////                  good for simple functions that you use only once
+////                  (parameters) => some code
+
+
+const hello = (name) => console.log(`Hello ${name}`);
+
+hello("Bro!");
+
+const age = (years) => {
+    console.log(`You are ${years} old`);
+}
+
+age(36);
+
+const birthday = (name, years) => console.log(`Happy ${years}th birthday ${name}!`);
+birthday("Tom", 34);
+
+
+setTimeout(()=> console.log("Bro Man!"), 3000);
+
+const numbers = [1,2,3,4,5,6];
+
+console.log(numbers.map((element) => Math.pow(element, 2)));
+
+console.log(numbers.filter((element) => element%2===0));
+console.log(numbers.filter((element) => element%2 !== 0));
+console.log(numbers.reduce((accumulator, element) => accumulator + element));
