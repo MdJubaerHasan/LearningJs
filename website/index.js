@@ -1395,7 +1395,7 @@ person2.eat();
 
 // ========================>>> Constructor
 
-//// constructor = special method for defining the 
+/* //// constructor = special method for defining the 
 ////               properties and method of objects
 
 function Car(make, model, year, color){
@@ -1415,4 +1415,42 @@ car1.drive();
 const car2 = new Car("Chevrolet", "Camaro", 2025, "Blue");
 
 console.log(car2.make);
-car2.drive();
+car2.drive(); */
+
+// ========================>>> Classes
+
+//// class = (ES6 features) provides a morestructured and cleaner 
+////          way to work with objects compared to traditional
+////          constructor functions ex. static keyword, 
+////          encapsulation, inheritance 
+
+
+//// class will serve as a blueprint
+
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: BDT ${this.price.toFixed(2)}`);
+    }
+
+    canculateTotal(salesTax){
+        return this.price + (this.price * salesTax);
+    }
+}
+
+const salesTax = 0.05;
+
+const product1 = new Product("Shirt", 19.99);
+product1.displayProduct();
+
+const totalProduct1 = product1.canculateTotal(salesTax);
+console.log(`Total price (with tax): BDT ${totalProduct1.toFixed(2)}`);
+const product2 = new Product("Pant", 22.50);
+product2.displayProduct();
+const product3 = new Product("Underware", 15.99);
+product1.displayProduct();
