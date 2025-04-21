@@ -1518,7 +1518,7 @@ User.getUserCount(); */
 
 // ========================>>> Inheritance
 
-//// inheritance = allows a new class to inherit properties and methods
+/* //// inheritance = allows a new class to inherit properties and methods
 ////               from an existing class ( parent -> child) 
 ////               helps with code reusability
 
@@ -1569,6 +1569,112 @@ console.log(rabbit.alive);
 
 hawk.eat();
 fish.sleep();
+rabbit.run();
+fish.swim();
+hawk.fly(); */
+
+
+// ========================>>> Super
+
+//// super = keyword is used in classes to call the constructor or
+////         access the properties and methods of a parent(superclass)
+//// this = this object
+//// super = the parent of the object
+
+
+// class Animal{
+//     constructor(){
+
+//     }
+// }
+
+// class Rabbit extends Animal{
+//     constructor(name, age, runSpeed){
+//         super();
+//         this.name = name;
+//         this.age = age;
+//         this.runSpeed = runSpeed;
+//     }
+// }
+
+// class Fish extends Animal{
+//     constructor(name, age, swimSpeed){
+//         super();
+//         this.name = name;
+//         this.age = age;
+//         this.swimSpeed = swimSpeed;
+//     }
+// }
+
+// class Hawk extends Animal{
+//     constructor(name, age, flySpeed){
+//         super();
+//         this.name = name;
+//         this.age = age;
+//         this.flySpeed = flySpeed;
+//     }
+// }
+//// In this above example, we are repeating ourself for name and age
+//// Using super, we can be more efficient
+
+class Animal{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    move(speed){
+        console.log(`The ${this.name} moves at a speed of ${speed} kmh`);
+    }
+}
+
+class Rabbit extends Animal{
+    constructor(name, age, runSpeed){
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+
+    run(){
+        console.log(`This ${this.name} can run`);
+        super.move(this.runSpeed);
+    }
+}
+
+class Fish extends Animal{
+    constructor(name, age, swimSpeed){
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
+
+    swim (){
+        console.log(`This ${this.name} can swim`);
+        super.move(this.swimSpeed);
+    }
+}
+
+class Hawk extends Animal{
+    constructor(name, age, flySpeed){
+        super(name, age);
+        this.flySpeed = flySpeed;
+    }
+
+    fly(){
+        console.log(`This ${this.name} can fly`);
+        super.move(this.flySpeed);
+    }
+}
+
+const rabbit = new Rabbit("buggy", 1, 25);
+const fish = new Fish("nimo",2, 12);
+const hawk = new Hawk("hawkeye", 3, 50);
+
+console.log(rabbit.name);
+console.log(rabbit.age);
+console.log(`The ${rabbit.age} year old ${rabbit.name} runs at ${rabbit.runSpeed} km/h!`);
+
+console.log(`Hi,I am ${fish.name}, I am a fish` +  
+`despite being only ${fish.age} years old, I swim at ${fish.swimSpeed} km/h!`);
+
 rabbit.run();
 fish.swim();
 hawk.fly();
