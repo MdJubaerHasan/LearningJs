@@ -1458,7 +1458,7 @@ product1.displayProduct(); */
 
 // ========================>>> Static
 
-//// static = keyword that defines properties or methods that belong
+/* //// static = keyword that defines properties or methods that belong
 ////          to a class itself rather than the objects created from
 ////          that class(class owns anything static, not the object)
 
@@ -1513,4 +1513,62 @@ console.log(user2.username);
 // user1.getUserCount(); //// this will create a type error
 // console.log(user1.userCount); //// this will return undefined
 console.log(User.userCount);
-User.getUserCount();
+User.getUserCount(); */
+
+
+// ========================>>> Inheritance
+
+//// inheritance = allows a new class to inherit properties and methods
+////               from an existing class ( parent -> child) 
+////               helps with code reusability
+
+
+class Animal{
+
+    alive = true;
+
+    eat(){
+        console.log(`This ${this.name} is eating.`);
+    }
+    sleep(){
+        console.log(`This ${this.name} is sleeping.`);
+    }
+
+}
+
+class Rabbit extends Animal{
+    name = "rabbit";
+    run(){
+        console.log(`This ${this.name} is running!`);
+    }
+}
+
+class Fish extends Animal{
+    name = "Fish";
+    
+    swim(){
+        console.log(`This ${this.name} is swimming!`);
+    }
+}
+
+class Hawk extends Animal{
+    name = "Hawk";
+
+    fly(){
+        console.log(`This ${this.name} is flying!`);
+    }
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+console.log(rabbit.alive);
+rabbit.alive = false;
+console.log(rabbit.alive);
+
+hawk.eat();
+fish.sleep();
+rabbit.run();
+fish.swim();
+hawk.fly();
