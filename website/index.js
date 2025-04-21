@@ -1419,7 +1419,7 @@ car2.drive(); */
 
 // ========================>>> Classes
 
-//// class = (ES6 features) provides a morestructured and cleaner 
+/* //// class = (ES6 features) provides a morestructured and cleaner 
 ////          way to work with objects compared to traditional
 ////          constructor functions ex. static keyword, 
 ////          encapsulation, inheritance 
@@ -1453,4 +1453,64 @@ console.log(`Total price (with tax): BDT ${totalProduct1.toFixed(2)}`);
 const product2 = new Product("Pant", 22.50);
 product2.displayProduct();
 const product3 = new Product("Underware", 15.99);
-product1.displayProduct();
+product1.displayProduct(); */
+
+
+// ========================>>> Static
+
+//// static = keyword that defines properties or methods that belong
+////          to a class itself rather than the objects created from
+////          that class(class owns anything static, not the object)
+
+class MathUtil{
+    static PI = 3.14159;
+    static getDiameter(radius){
+        return radius*2;
+    }
+
+    static getCiscumference(radius){
+        return 2 * this.PI * radius;
+    }
+
+    static getArea(radius){
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(MathUtil.PI);
+console.log(MathUtil.getDiameter(10));
+console.log(MathUtil.getCiscumference(10));
+console.log(MathUtil.getArea(10));
+const mt1 = new MathUtil();
+
+
+class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+
+    sayHello(){
+        console.log(`Hello, I am ${this.username}`);
+    }
+
+    static getUserCount(){
+        console.log(`There are ${User.userCount} users online right now!`);
+    }
+
+}
+
+const user1 = new User("Spongebob");
+const user2 = new User("Patrick");
+user1.sayHello();
+user2.sayHello();
+
+console.log(user1.username);
+console.log(user2.username);
+
+// user1.getUserCount(); //// this will create a type error
+// console.log(user1.userCount); //// this will return undefined
+console.log(User.userCount);
+User.getUserCount();
