@@ -1681,7 +1681,7 @@ hawk.fly(); */
 
 // ========================>>> Getters and Setters
 
-//// getter = special method that makes a property readable
+/* //// getter = special method that makes a property readable
 //// setter = special method that makes a property writable
 
 //// validate and modify a value when reading/writing a property
@@ -1742,7 +1742,7 @@ class Person{
 
     set firstName(newFirstName){
         if (typeof newFirstName === "string" && newFirstName.length > 0) {
-            this._banana = newFirstName;
+            this._firstname = newFirstName;
         }else{
             console.error("First name must be a non-empty string");
         }
@@ -1796,13 +1796,106 @@ console.log(person1.age);
 //// has to match the get x, set x naming convension, otherwise
 //// the this.x = value inside the constructor will not trigger 
 //// the setter method for the property x
-//// 
-//// inside the setter method, the private varible can be anything
-//// 
-//// 
-//// 
-//// 
-//// 
-//// 
-//// 
 
+//// inside the setter method, the private varible can be anything
+//// the internal variable _x is the one holding value so when you
+//// do a get x(), you return the internal _x */
+
+
+// ========================>>> Destructuring
+
+//// destructuring = extract values from arrays and objects, then
+////                 assign them to variables in a convenient way
+////                 [] = to perform array destructuring
+////                 {} = to perform object destructuring
+
+//// Example 1: Swap the values of Two variables
+
+let a = 1;
+let b = 2;
+
+console.log(`a = ${a}`);
+console.log(`b = ${b}`);
+
+//// destructuring on the left hand side, creating a new array on the right 
+[a, b] = [b, a];
+
+
+console.log(`a = ${a}`);
+console.log(`b = ${b}`);
+
+//// Example 2: Swap Two elements in an array
+
+const colors = ["red", "green", "blue", "black", "white"];
+
+console.log(`Colors before:  = ${colors}`);
+
+
+//// destructuring on the left hand side, creating a new array on the right 
+[colors[0], colors[4]] = [colors[4], colors[0]];
+
+
+console.log(`Colors after:  = ${colors}`);
+
+
+//// Example 3: Assign array elements to variables
+
+//// destructuring on the left hand side, creating a new array on the right
+
+//// we can combine destructuring with rest parameters using ...
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors;
+
+
+
+console.log(`First Color: ${firstColor}`);
+console.log(`Second Color: ${secondColor}`);
+console.log(`Third Color: ${thirdColor}`);
+console.log(`Extra colors: ${extraColors}`);
+
+
+//// Example 4: Extract values from objects
+
+const person1 = {
+    firstName1: "Spongebob",
+    lastName1: "Squarepants",
+    age1: 30,
+    job1: "Fry Cook",
+}
+
+const person2 = {
+    firstName2: "Patrick",
+    lastName2: "Star",
+    age2: 34,
+}
+
+const {firstName1, lastName1, age1, job1} = person1;
+
+console.log(firstName1);
+console.log(lastName1);
+console.log(age1);
+console.log(job1);
+
+
+const {firstName2, lastName2, age2, job2="unemployed"} = person2;
+
+console.log(firstName2);
+console.log(lastName2);
+console.log(age2);
+console.log(job2);
+
+
+//// Example 5: Destructure in function parameters
+
+const person3 = {
+    firstName: "Sandy",
+    lastName: "Cheeks",
+    age: 20,
+}
+
+function displayPerson({firstName, lastName, age, job}){
+    console.log(`Name: ${firstName} ${lastName}`);
+    console.log(`Age: ${age} years`);
+    console.log(`Job: ${job}`);
+}
+
+displayPerson(person3);
