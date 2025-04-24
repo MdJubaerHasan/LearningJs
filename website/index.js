@@ -1910,7 +1910,7 @@ displayPerson(person3);
 
 // ========================>>> Nested Objects
 
-//// nested objects = Objects inside of other Objects
+/* //// nested objects = Objects inside of other Objects
 ////                  Allows us to represent more complex data structures
 ////                  Child Object is enclosed by a Parent Object
 
@@ -1988,4 +1988,86 @@ const person3 = new Person("Squidward",
 console.log(person1.name);
 console.log(person1.address);
 console.log(person2.address.city);
-console.log(person3.address.country);
+console.log(person3.address.country); */
+
+
+// ========================>>> Array Of Objects
+
+const fruits = [{
+                    name:"apple",
+                    color: "red",
+                    calories: 95
+                },
+                {
+                    name:"orange",
+                    color: "orange",
+                    calories: 45
+                },
+                {
+                    name:"banana",
+                    color: "yellow",
+                    calories: 105
+                },
+                {
+                    name:"coconut",
+                    color: "white",
+                    calories: 159
+                },
+                {
+                    name:"pineapple",
+                    color: "yellow",
+                    calories: 37
+                },
+]
+
+console.log(fruits[0].name);
+console.log(fruits[2].calories);
+
+//// to add an object, we can use push() method
+fruits.push(
+    {
+        name: "grapes",
+        color: "purple",
+        calories: 62
+    }
+)
+console.log(fruits);
+
+//// to remove an object, use pop() method
+
+fruits.pop();
+
+console.log(fruits);
+
+//// to remove objects from certain indecis, use splice
+
+fruits.splice(0,1);
+console.log(fruits);
+
+
+//// looping through the object array 
+
+fruits.forEach(fruit => console.log(fruit.color));
+
+//// example of map
+
+const fruitNames = fruits.map(fruit => fruit.name);
+console.log(fruitNames);
+
+
+//// example of filter
+
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+console.log(yellowFruits);
+const lowCalFruits = fruits.filter(fruit => fruit.calories < 50);
+console.log(lowCalFruits);
+const highCalFruits = fruits.filter(fruit => fruit.calories >= 100);
+console.log(highCalFruits);
+
+//// example of reduce, which will return a single value
+
+const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max);
+console.log(maxFruit);
+
+const minFruit = fruits.reduce((min, fruit) => fruit.calories < min.calories ? fruit : min);
+console.log(minFruit);
