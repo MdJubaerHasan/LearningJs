@@ -1804,7 +1804,7 @@ console.log(person1.age);
 
 // ========================>>> Destructuring
 
-//// destructuring = extract values from arrays and objects, then
+/* //// destructuring = extract values from arrays and objects, then
 ////                 assign them to variables in a convenient way
 ////                 [] = to perform array destructuring
 ////                 {} = to perform object destructuring
@@ -1892,10 +1892,100 @@ const person3 = {
     age: 20,
 }
 
-function displayPerson({firstName, lastName, age, job}){
+function displayPerson({firstName, lastName, age, job="Unemployed"}){
     console.log(`Name: ${firstName} ${lastName}`);
     console.log(`Age: ${age} years`);
     console.log(`Job: ${job}`);
 }
 
 displayPerson(person3);
+
+//// Keep the following things in mind when destructuring objects 
+//// the property names must matchthe key names of the object
+//// if there is value for a property, we can set a  default
+//// the default value will only show when there is no such
+//// property for that object, otherwise it will show the value
+//// of the property for that object. */
+
+
+// ========================>>> Nested Objects
+
+//// nested objects = Objects inside of other Objects
+////                  Allows us to represent more complex data structures
+////                  Child Object is enclosed by a Parent Object
+
+////                  Person{Address{} , ConstractInfo{}}
+////                  ShoppingCart{Keyboard{}, Mouse{}, Monitor{}}
+
+
+const person = {
+    fullName: "Spongebob Squarepants",
+    age: 30,
+    isStudent: true,
+    hobbies: ["Karate", "Jellyfishing", "Cooking"],
+    address: {
+        street: "124 Conch St.",
+        city: "Ocean Bottom",
+        country: "International Water"
+    }
+}
+
+console.log(person.fullName);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies);
+console.log(person.address);
+console.log(person.address.street);
+console.log(person.address.city);
+
+
+//// Looping through
+
+for(const property in person.address){
+    console.log(person.address[property]);
+}
+
+class Address{
+    constructor(street, city, country) {
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+class Person{
+    //// passing in different parts of address, use rest parameters to 
+    //// store them in an array
+    constructor(name, age, ...address) {
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+
+
+const person1 = new Person("Spongebob",
+                            30,
+                            "124 Conch Street",
+                            "Ocean Bottom",
+                            "Int. Waters"
+
+)
+const person2 = new Person("Patrick",
+                            37,
+                            "128 Conch Street",
+                            "Ocean Bottom",
+                            "Int. Waters"
+)
+
+const person3 = new Person("Squidward",
+                            37,
+                            "126 Conch Street",
+                            "Ocean Bottom",
+                            "Int. Waters"
+)
+
+console.log(person1.name);
+console.log(person1.address);
+console.log(person2.address.city);
+console.log(person3.address.country);
