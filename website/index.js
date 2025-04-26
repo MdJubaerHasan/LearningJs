@@ -2163,7 +2163,9 @@ function shuffle(array){
 
 
 // ========================>>> Date Objects
-//// date object = Objects that contain values that represent dates and times
+
+
+/* //// date object = Objects that contain values that represent dates and times
 ////               These date objects can be changed and formatted
 
 
@@ -2215,6 +2217,106 @@ console.log(dateObject);
 const dateObjOne = new Date("2023-12-31");
 const dateObjTwo = new Date("2024-01-01");
 
-dateObjTwo > dateObjOne ? console.log("Happy New Year!") : console.log("Wait!");
- ;
+dateObjTwo > dateObjOne ? console.log("Happy New Year!") : console.log("Wait!"); */
 
+
+// ========================>>> Closure
+
+//// closure = A function defined inside of another function,
+////           the inner function has access to the variables
+////           and scope of the outer function.
+////           Allow for private variables and state maintenance
+////           Used frequently in JS frameworks: React, Vue, Angular
+
+
+function outer(){
+
+    let message = "Hello!";
+
+    function inner(){
+        console.log(message);
+    }
+
+    inner();
+}
+
+outer();
+
+message = "Goodbye"; //// This will not update, closures make variables private
+outer();
+
+
+//// Example of closures maintaining the state of a variable
+
+function increament(){
+
+    let count = 0;
+    count++;
+    console.log(`Count increased to ${count}`);
+}
+
+increament();
+increament();
+//// ......
+//// Every time we invoke increament, we are increamenting but we are also 
+//// initializing the value of count.
+
+//// to maintain state , we can use closure while keeping the variuable secure
+
+function createCounter(){
+
+    let count = 0;
+
+    function increament(){
+        count++;
+        console.log(`Count increased to ${count}`);
+    }
+
+    function getCount(){
+        return count;
+    }
+
+    return {increament:increament, getCount:getCount};
+}
+
+const counter = createCounter();
+counter.increament();
+counter.increament();
+counter.increament();counter.increament();counter.increament();counter.increament();
+let currentCount = counter.getCount();
+console.log(`Current count: ${currentCount}`);
+
+
+//// example of a game 
+
+
+function createGame(){
+    let score = 0;
+
+    function increaseScore(points){
+
+        score += points;
+        console.log(`+${points} pts`);
+    }
+
+    function decreaseScore(points){
+
+        score -= points;
+        console.log(`-${points} pts`);
+    }
+
+
+    function getScore(){
+        return score;
+    }
+
+    return {increaseScore:increaseScore, decreaseScore:decreaseScore, getScore:getScore }
+}
+
+const game = createGame();
+
+game.increaseScore(5);
+game.decreaseScore(3);
+game.increaseScore(6);
+
+console.log(`Final score is ${game.getScore()} pts`);
