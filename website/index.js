@@ -2075,7 +2075,7 @@ console.log(minFruit); */
 
 // ========================>>> Sort
 
-//// sort() = method used to sort elements of an array in place.
+/* //// sort() = method used to sort elements of an array in place.
 ////          Sorts elements as strings in lexicographic order, not alphabetical
 ////          lexicographic = (alphabet + number + symbol) as strings
 
@@ -2140,4 +2140,23 @@ console.log(people);
 people.sort((a, b) => a.name.localeCompare(b.name));
 console.log(people);
 people.sort((a, b) => b.name.localeCompare(a.name));
-console.log(people);
+console.log(people); */
+
+
+// ========================>>> Shuffle an array
+
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+
+shuffle(cards);
+console.log(cards);
+
+
+//// Use Fisher-Yates algorithm
+
+
+function shuffle(array){
+    for (let i = array.length - 1; i > 0; i--){
+        const random = Math.floor(Math.random() * (i+1));
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}
