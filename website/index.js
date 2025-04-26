@@ -2145,7 +2145,7 @@ console.log(people); */
 
 // ========================>>> Shuffle an array
 
-const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+/* const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
 
 shuffle(cards);
 console.log(cards);
@@ -2159,4 +2159,62 @@ function shuffle(array){
         const random = Math.floor(Math.random() * (i+1));
         [array[i], array[random]] = [array[random], array[i]];
     }
-}
+} */
+
+
+// ========================>>> Date Objects
+//// date object = Objects that contain values that represent dates and times
+////               These date objects can be changed and formatted
+
+
+//// Date Constructor follows Date(year, month, day, hour, minute, second, ms)
+const date1 = new Date(2024, 0, 1, 2, 3, 5);
+console.log(date1);
+
+//// we can also pass string day representation
+const date2 = new Date("2024-01-02T12:00:00Z");
+console.log(date2);
+
+//// also we can pass in given amount of time in miliseconds,
+////  since epic (when the computer things time has begun)
+
+const date3 = new Date(1700000000000);
+console.log(date3);
+
+
+//// by default, no argument provides current date and time
+
+const dateObject = new Date();
+console.log(dateObject);
+
+const year = dateObject.getFullYear();
+const month = dateObject.getMonth();
+const date = dateObject.getDate();
+const day = dateObject.getDay();
+const hour = dateObject.getHours();
+const minute = dateObject.getMinutes();
+const second = dateObject.getSeconds();
+
+console.log(year);
+console.log(month);
+console.log(date);
+console.log(day);
+console.log(hour);
+console.log(minute);
+console.log(second);
+
+dateObject.setFullYear(2026);
+dateObject.setMonth(0);
+dateObject.setDate(31)
+
+console.log(dateObject);
+
+
+//// we can also compare two date objects 
+
+const dateObjOne = new Date("2023-12-31");
+const dateObjTwo = new Date("2024-01-01");
+
+dateObjTwo > dateObjOne ? console.log("Happy New Year!") : console.log("Wait!");
+ ;
+
