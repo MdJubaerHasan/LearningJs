@@ -2222,7 +2222,7 @@ dateObjTwo > dateObjOne ? console.log("Happy New Year!") : console.log("Wait!");
 
 // ========================>>> Closure
 
-//// closure = A function defined inside of another function,
+/* //// closure = A function defined inside of another function,
 ////           the inner function has access to the variables
 ////           and scope of the outer function.
 ////           Allow for private variables and state maintenance
@@ -2319,4 +2319,4 @@ game.increaseScore(5);
 game.decreaseScore(3);
 game.increaseScore(6);
 
-console.log(`Final score is ${game.getScore()} pts`);
+console.log(`Final score is ${game.getScore()} pts`); */
