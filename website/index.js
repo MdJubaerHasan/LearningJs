@@ -2324,7 +2324,7 @@ console.log(`Final score is ${game.getScore()} pts`); */
 
 // ========================>>> Set Timeout
 
-//// setTimeout() = function in JavaScript that allows you to schedule the
+/* //// setTimeout() = function in JavaScript that allows you to schedule the
 ////                execution of a function after an amount of time (milliseconds)
 ////                Times are approximate (varies based on the workload of the 
 ////                JavaScript runtime env.)
@@ -2365,4 +2365,7 @@ function clearTimer(){
     clearTimeout(timeoutID2);
     console.log("Cleared");
     
-}
+} */
+
+
+// ========================>>> 
