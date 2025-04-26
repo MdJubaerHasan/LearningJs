@@ -1993,7 +1993,7 @@ console.log(person3.address.country); */
 
 // ========================>>> Array Of Objects
 
-const fruits = [{
+/* const fruits = [{
                     name:"apple",
                     color: "red",
                     calories: 95
@@ -2070,4 +2070,74 @@ const maxFruit = fruits.reduce((max, fruit) => fruit.calories > max.calories ? f
 console.log(maxFruit);
 
 const minFruit = fruits.reduce((min, fruit) => fruit.calories < min.calories ? fruit : min);
-console.log(minFruit);
+console.log(minFruit); */
+
+
+// ========================>>> Sort
+
+//// sort() = method used to sort elements of an array in place.
+////          Sorts elements as strings in lexicographic order, not alphabetical
+////          lexicographic = (alphabet + number + symbol) as strings
+
+let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
+
+fruits.sort();
+console.log(fruits);
+
+let numbers = [1, 10, 2, 9, 3, 8, 4, 5, 6];
+numbers.sort();
+console.log(numbers); //// this will not sort it properly
+
+//// due to sorting lexicographically, the result will be :
+//// [1, 10, 2, 3, 4, 5, 6, 8, 9], as each treated as string
+
+//// to sort numbers, we have to follow a ceretain set of steps
+//// we have to write a custom comparison function, inside the 
+//// sort() method, as a callback
+
+let numbersToBe = [1, 10, 2, 9, 3, 8, 4, 5, 6];
+numbersToBe.sort((a,b) => a-b); //// this forces js to treat it as number
+console.log(numbersToBe);
+numbersToBe.sort((a, b) => b-a);
+console.log(numbersToBe);
+
+
+//// sort  based on given property
+
+const people = [
+                {
+                    name: "Spongebob",
+                    age: 30,
+                    gpa: 3.0
+                },
+                {
+                    name: "Patrick",
+                    age: 37,
+                    gpa: 1.5
+                },
+                {
+                    name: "Squidward",
+                    age: 51,
+                    gpa: 2.5
+                },
+                {
+                    name: "Sandy",
+                    age: 27,
+                    gpa: 4.0
+                }
+               ];
+
+people.sort((a,b) => a.age - b.age);
+console.log(people);
+people.sort((a, b) => b.age - a.age);
+console.log(people);
+people.sort((a, b) => a.gpa - b.gpa);
+console.log(people);
+
+people.sort(); //// By default, sorting by the last property here
+console.log(people);
+
+people.sort((a, b) => a.name.localeCompare(b.name));
+console.log(people);
+people.sort((a, b) => b.name.localeCompare(a.name));
+console.log(people);
