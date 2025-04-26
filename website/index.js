@@ -1,7 +1,7 @@
 // ========================>>> Basics
 
 // console.log(`Hello`);
-// using backticks (known as template literal) is btter than single or double quotes  as they allow injecting variables
+// using backticks (known as template literal) is batter than single or double quotes  as they allow injecting variables
 // console.log(`I like Pizza`);
 
 // window.alert(`This is an alert`);
@@ -72,17 +72,17 @@ console.log(typeof online); */
 
 /* let fullName = "Bro Code";
 let myAge = 26;
-let amIStudnt = false;
+let amIStudent = false;
 
 document.getElementById("p1").textContent = `Your name is ${fullName}`;
 document.getElementById("p2").textContent = `You are ${age} years old `;
-document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `; */
+document.getElementById("p3").textContent = `Enrolled: ${amIStudent} `; */
 
 
 
 // ========================>>> Arithmetic operators
 
-// areithmatic operators = operands (values, variables) operands (+ - / *) ex. 11 = x + 5
+// arithmetic operators = operands (values, variables) operands (+ - / *) ex. 11 = x + 5
 
 // Operators
 // # +
@@ -92,7 +92,7 @@ document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `; */
 // # ** (exponent)
 // # % (modulo)
 
-// Instaed of writing the whole variable we can use Augmented assignment operators
+// Instead of writing the whole variable we can use Augmented assignment operators
 // # +=
 // # -=
 // # /=
@@ -100,20 +100,20 @@ document.getElementById("p3").textContent = `Enrolled: ${amIStudnt} `; */
 // # **=
 // # %=
 
-// Increament operator
+// Increment operator
 // # ++
 // # --
 
-// Remember, if you are trying to do multiple operatons , the precedence matters 
-// For example, Studnt = 999, if you do Log(student++), it will first print 999
-// Then it will increament to 1000. So, do ++stuudent.
+// Remember, if you are trying to do multiple operations , the precedence matters 
+// For example, Student = 999, if you do Log(student++), it will first print 999
+// Then it will increment to 1000. So, do ++student.
 
 
 /* Operator precedence
     1. parenthesis ()
     2. exponents
     3. multiplication & division & modulo
-    4. addition & ssubstraction
+    4. addition & subtraction
 */
 
 /* let students = 30;
@@ -163,7 +163,7 @@ console.log(age, typeof age);
 
 let x = "pizza";
 let y = "pizza";
-let z = ""; // This will come in handy if userinput is empty
+let z = ""; // This will come in handy if user input is empty
 
 x = Number(x);
 y = String(y);
@@ -179,8 +179,8 @@ console.log(z, typeof z); */
 
 // variables that can't be changed
 // A good practice for const is to make all of the letters of that variable uppercase
-// making them uppercase is only valid practice for primitime datatype, number and booleans
-// since string is referenced data type , it doesn't follow that convension 
+// making them uppercase is only valid practice for primitive datatype, number and booleans
+// since string is referenced data type , it doesn't follow that convention 
 
 /* const PI = 3.14159;
 
@@ -211,7 +211,7 @@ window.alert(`The Circumference is ${circumference}`); */
 
 console.log(Math.PI);
 
-// e ( Euler's Number , base of natural logarithm , used in problems relating to exponential grwoth)
+// e ( Euler's Number , base of natural logarithm , used in problems relating to exponential growth)
 
 console.log(Math.E);
 
@@ -276,13 +276,13 @@ console.log(min); */
 
 // ========================>>> Random Number Generator
 
-// by default, Math.random gives a random number between 0 and 1 with decilam points
+// by default, Math.random gives a random number between 0 and 1 with decimal points
 
 // so to get a random number between 0 and X, we need to multiply it 
 
-// however, by default it will return a decilam point number, so use floor or celi
+// however, by default it will return a decimal point number, so use floor or ceil
 
-// to increase the lower range simpley add + 1
+// to increase the lower range simply add + 1
 
 /* let randomNum = Math.random() * 6 + 1;
 console.log(randomNum);
@@ -352,7 +352,7 @@ myButton.onclick = function(){
 
 
 
-/*  Ternary operator is a shortcut to simple if and else statrments
+/*  Ternary operator is a shortcut to simple if and else statements
 
     that helps to assign a variable based on a condition 
 
@@ -366,7 +366,7 @@ console.log(message);
 
 let time = 2;
 
-let greeting = time < 12 ? "Good Morniong!" : "Good Afternoon!";
+let greeting = time < 12 ? "Good Morning!" : "Good Afternoon!";
 
 console.log(greeting);
 
@@ -392,7 +392,7 @@ console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))
 
 // we will evaluate Day variable
 
-// The bnreak keyword is necessary becasue, unlike if else, once a case is 
+// The break keyword is necessary because, unlike if else, once a case is 
 // matched, the subsequent code for other cases will execute as well
 // hence we need to break out of the switch if the case is matched.
 
@@ -425,29 +425,29 @@ console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))
 
 let testScore = 32;
 
-let letterGeade;
+let letterGrade;
 
 // in this following case we are evaluation true ness of the conditional cases
 
 switch(true){
     case testScore >= 90:
-        letterGeade = "A";
+        letterGrade = "A";
         break;
     case testScore >= 80:
-        letterGeade = "B";
+        letterGrade = "B";
         break;
     case testScore >= 70:
-        letterGeade = "C";
+        letterGrade = "C";
         break;
     case testScore >= 60:
-        letterGeade = "D";
+        letterGrade = "D";
         break;
     default:
-        letterGeade = "F";
+        letterGrade = "F";
         
 }
 
-console.log(letterGeade); */
+console.log(letterGrade); */
 
 
 // ========================>>> String
@@ -459,27 +459,27 @@ console.log(letterGeade); */
 console.log(userName);
 // let userName = "oooooooooo"
 
-// useing .charAt() will return a character at a given index
+// using .charAt() will return a character at a given index
 
 console.log(userName.charAt(3));
 
-// uisng .indexOf() will return the idex of the first occurance of a character
+// using.indexOf() will return the idex of the first occurrence of a character
 
 console.log(userName.indexOf("o"));
 
-// uisng .lastIndexOf() returns the idex of the last ocuurance of a character
+// using .lastIndexOf() returns the idex of the last occurrence of a character
 
 console.log(userName.lastIndexOf("o"));
 
-// using .lenth returns the total number of character
+// using .length returns the total number of character
 
 console.log(userName.length);
 
-// uisng .trim() removes whitespaces , both before and after
+// using.trim() removes whitespaces , both before and after
 
 console.log(userName.trim());
 
-// to set the characters of the string to uppser case, use .toUpperCase()
+// to set the characters of the string to upper case, use .toUpperCase()
 // this ignores not alphabetic or already uppercase letters 
 
 console.log(userName.toUpperCase());
@@ -492,7 +492,7 @@ console.log(userName.toLowerCase());
 
 console.log(userName.repeat(5))
 
-// to check if a string starts with a certain character, use .starstWith(), returns bool
+// to check if a string starts with a certain character, use .startsWith(), returns bool
 
 console.log(userName.startsWith(" "));
 
@@ -504,7 +504,7 @@ if (userName.startsWith(" ")) {
     console.log(userName);
 }
 
-// to check if a string ends with a certain character, use .endstWith()
+// to check if a string ends with a certain character, use .endsWith()
 
 if (userName.endsWith("\n")) {
     console.log("You name can't end with empty space");
@@ -520,14 +520,14 @@ if (userName.includes(" ")) {
     console.log(userName);
 }
 
-// replace certain character with something ,use .replceAll()
+// replace certain character with something ,use .replaceAll()
 
 let phoneNumber = "123-456-7890";
 
 console.log(phoneNumber.replaceAll("-", "/"));
 
 
-// .padStart(Value, padWith) this pads strings to certain length by adding the padwith character
+// .padStart(Value, padWith) this pads strings to certain length by adding the padWith character
 // .padEnd and pad start are as their name
 
 console.log(phoneNumber.padStart(15, "0"));
@@ -544,7 +544,8 @@ console.log(phoneNumber.padEnd(15,"0")); */
 // const fullName = "Bro Code";
 
 /* let firstName = fullName.slice(0,4);
-let lastName = fullName.slice(4, fullName.length); // same as lastName = fullName.slice(4), will get all the way to the end
+let lastName = fullName.slice(4, fullName.length); 
+//// same as lastName = fullName.slice(4), will get all the way to the end
 
 
 console.log(firstName);
@@ -552,30 +553,31 @@ console.log(lastName);
 
 let firstChar = fullName.slice(0, 1);
 console.log(firstChar);
-let lastChar = fullName.slice(-1); // - 2 would get the second index from the last and also -1
+let lastChar = fullName.slice(-1); 
+//// - 2 would get the second index from the last and also -1
 console.log(lastChar); */
 
 /* // lets make a dynamic way to extract first and last name from a string based on space
 
 
-let firstname = fullName.slice(0, fullName.indexOf(" "));
+let firstName = fullName.slice(0, fullName.indexOf(" "));
 let lastName = fullName.slice(fullName.indexOf(" "), fullName.length).trim();
-console.log(firstname);
+console.log(firstName);
 console.log(lastName); */
 
 /* 
 const email = "Bro1@gmail.com";
 
 let username = email.slice(0, email.indexOf("@"));
-let extention = email.slice(email.indexOf("@")+1);
+let extension = email.slice(email.indexOf("@")+1);
 
 console.log(username);
-console.log(extention); */
+console.log(extension); */
 
 
 // ========================>>> Method Chaining
 
-/* // calling one methode after another using . dot 
+/* // calling one method after another using . dot 
 
 let userName  = window.prompt("Enter you username");
 
@@ -604,16 +606,16 @@ console.log(userName);  */
 /* const temp = 200;
 
 if (temp > 0 && temp <= 30) {
-    console.log("Weahter is good");
+    console.log("Weather is good");
 }else{
-    console.log("Weahter is bad");
+    console.log("Weather is bad");
 }
 
 
 if (temp <= 0 || temp >= 30) {
-    console.log("Weahter is actually bad");
+    console.log("Weather is actually bad");
 }else{
-    console.log("Weahter is actually good");
+    console.log("Weather is actually good");
 }
 
 const isSunny = true;
@@ -650,7 +652,7 @@ if (PI !== "3.14") {
 
 // ========================>>> While Loop
 
-//// reapeat some code WHILE some condition is true
+//// repeat some code WHILE some condition is true
 
 // let userName = "";
 
@@ -696,7 +698,7 @@ console.log("WOW!"); */
 
 // ========================>>> Functions
 
-//// a section of resuable code, declare once , use on demand, call to execute
+//// a section of reusable code, declare once , use on demand, call to execute
 /* let user = "Meow";
 let age = 69;
 
@@ -716,14 +718,14 @@ function add(x, y){
     return x+y;
 }
 
-function substract(x, y){
+function subtract(x, y){
     return x-y;
 }
 
 function multiply(x,y){
     return x*y;
 }
-function devide(x,y){
+function divide(x,y){
     return x/y;
 }
 
@@ -735,9 +737,9 @@ function isValidEmail(email){
     return email.includes("@") ? true : false;
 }
 console.log(add(2,3));
-console.log(substract(2,3));
+console.log(subtract(2,3));
 console.log(multiply(2,3));
-console.log(devide(2,3));
+console.log(divide(2,3));
 console.log(isEven(14));
 
 console.log(isValidEmail("meow@booboob.com")); */
@@ -750,9 +752,9 @@ console.log(isValidEmail("meow@booboob.com")); */
 
 let x = 1;
 //let x = 2; 
-//// declaring x will produce and error, because they are in the same scrope;
+//// declaring x will produce and error, because they are in the same scope;
 
-//// anytime a varibale is declared within a set of {}, it is in a local scope;
+//// anytime a variable is declared within a set of {}, it is in a local scope;
 function function1(){
     let x = 1;
     console.log(x);
@@ -767,7 +769,7 @@ function2();
 
 //// above, there are no errors as both 'x' are within different scopes;
 
-//// gloabl scope is, a variable declared outside {} and outside function
+//// global scope is, a variable declared outside {} and outside function
 
 //// if variable with same name available in both scopes, local one will be selected
 
@@ -809,7 +811,7 @@ console.log(fruits);
 fruits.pop();
 console.log(fruits);
 
-//// .unshift() method adds an element at the begining of the array
+//// .unshift() method adds an element at the beginning of the array
 
 fruits.unshift("mango");
 console.log(fruits);
@@ -866,7 +868,7 @@ console.log(fruits); */
 // ========================>>> Spread Operators
 
 //// Spread operator ( ... ) allows an iterable such as an array or string
-// /* //// to be expanded into seperate elements (unpack the element)
+// /* //// to be expanded into separate elements (unpack the element)
 
 // let numbers = [1,2,3,4,5];
 
@@ -897,11 +899,11 @@ console.log(fruits); */
 
 // ========================>>> rest parameters
 
-/* // rest parameters = (...rest) alllow a function work with a variable number
-//  of arguements bundling them into an array 
+/* // rest parameters = (...rest) allow a function work with a variable number
+//  of arguments bundling them into an array 
 
-// spread op = expands an array into seperate elements
-// rest op = bundles seperate elements into an array 
+// spread op = expands an array into separate elements
+// rest op = bundles separate elements into an array 
 
 function openFridge(...foods){
     console.log(foods);
@@ -909,7 +911,7 @@ function openFridge(...foods){
 
 const food1 = "pizza";
 const food2 = "hamburger";
-const food3 = "hotfog";
+const food3 = "hotdog";
 const food4 = "sushi";
 const food5 = "ramen";
 
@@ -958,7 +960,7 @@ console.log(fullName);
 // wait(leave);
 // leave(goodbye);
 // hello(wait(leave(goodbye))); 
-// //// we cant do these becasue the funtions don't have return value
+// //// we cant do these because the functions don't have return value
 
 
 //// Proper Chaining
@@ -1094,8 +1096,8 @@ const cubes = numbers.map(cube);
 console.log(cubes);
 
 
-//// The key differnece between .map and .forEach is , map returns a 
-//// new array, keeps the original unchanged, while forEach chnages the
+//// The key difference between .map and .forEach is , map returns a 
+//// new array, keeps the original unchanged, while forEach changes the
 //// original array
 
 
@@ -1195,7 +1197,7 @@ function sum(previous, next){
     return previous + next;
 }
 
-console.log(`Yout total is ${total} pounds`);
+console.log(`Your total is ${total} pounds`);
 
 
 const grades = [75, 50, 90, 80, 65, 95];
@@ -1325,7 +1327,7 @@ console.log(numbers.reduce((accumulator, element) => accumulator + element)); */
 ////           }
 
 const person1 = {
-    firstname: "Spongebob",
+    firstName: "Spongebob",
     lastName: "Squarepants",
     age: 30,
     isEmployed : true,
@@ -1333,14 +1335,14 @@ const person1 = {
     eat: () => console.log("I am eating a Krabby Patty"),
 }
 
-console.log(person1.firstname);
+console.log(person1.firstName);
 console.log(person1.lastName);
 console.log(person1.isEmployed);
 person1.sayHello();
 person1.eat();
 
 const person2 = {
-    firstname: "Patrick",
+    firstName: "Patrick",
     lastName: "Star",
     age: 42,
     isEmployed : false,
@@ -1348,7 +1350,7 @@ const person2 = {
     eat: () => console.log("I am eating roast beef, chicken and pizza"),
 }
 
-console.log(person2.firstname);
+console.log(person2.firstName);
 console.log(person2.lastName);
 console.log(person2.age);
 person2.sayHello();
@@ -1389,7 +1391,7 @@ person2.eat();
 //// this outside the person object, we will invoke the global 
 //// window object
 // console.log(this);
-//// *** this keyword does not work with Arrow Function, it inviokes 
+//// *** this keyword does not work with Arrow Function, it invokes 
 //// *** the global window object */
 
 
@@ -1419,7 +1421,7 @@ car2.drive(); */
 
 // ========================>>> Classes
 
-/* //// class = (ES6 features) provides a morestructured and cleaner 
+/* //// class = (ES6 features) provides a more structured and cleaner 
 ////          way to work with objects compared to traditional
 ////          constructor functions ex. static keyword, 
 ////          encapsulation, inheritance 
@@ -1438,7 +1440,7 @@ class Product{
         console.log(`Price: BDT ${this.price.toFixed(2)}`);
     }
 
-    canculateTotal(salesTax){
+    calculateTotal(salesTax){
         return this.price + (this.price * salesTax);
     }
 }
@@ -1448,7 +1450,7 @@ const salesTax = 0.05;
 const product1 = new Product("Shirt", 19.99);
 product1.displayProduct();
 
-const totalProduct1 = product1.canculateTotal(salesTax);
+const totalProduct1 = product1.calculateTotal(salesTax);
 console.log(`Total price (with tax): BDT ${totalProduct1.toFixed(2)}`);
 const product2 = new Product("Pant", 22.50);
 product2.displayProduct();
@@ -1468,7 +1470,7 @@ class MathUtil{
         return radius*2;
     }
 
-    static getCiscumference(radius){
+    static getCircumference(radius){
         return 2 * this.PI * radius;
     }
 
@@ -1479,7 +1481,7 @@ class MathUtil{
 
 console.log(MathUtil.PI);
 console.log(MathUtil.getDiameter(10));
-console.log(MathUtil.getCiscumference(10));
+console.log(MathUtil.getCircumference(10));
 console.log(MathUtil.getArea(10));
 const mt1 = new MathUtil();
 
@@ -1793,11 +1795,11 @@ console.log(person1.age);
 
 //// when using getters and setters, one must keep the following in mind:
 //// the name in the constructor (this.x) , x being the property
-//// has to match the get x, set x naming convension, otherwise
+//// has to match the get x, set x naming convention, otherwise
 //// the this.x = value inside the constructor will not trigger 
 //// the setter method for the property x
 
-//// inside the setter method, the private varible can be anything
+//// inside the setter method, the private variable can be anything
 //// the internal variable _x is the one holding value so when you
 //// do a get x(), you return the internal _x */
 
@@ -1901,7 +1903,7 @@ function displayPerson({firstName, lastName, age, job="Unemployed"}){
 displayPerson(person3);
 
 //// Keep the following things in mind when destructuring objects 
-//// the property names must matchthe key names of the object
+//// the property names must match key names of the object
 //// if there is value for a property, we can set a  default
 //// the default value will only show when there is no such
 //// property for that object, otherwise it will show the value
@@ -1914,7 +1916,7 @@ displayPerson(person3);
 ////                  Allows us to represent more complex data structures
 ////                  Child Object is enclosed by a Parent Object
 
-////                  Person{Address{} , ConstractInfo{}}
+////                  Person{Address{} , ConstructInfo{}}
 ////                  ShoppingCart{Keyboard{}, Mouse{}, Monitor{}}
 
 
@@ -2039,7 +2041,7 @@ fruits.pop();
 
 console.log(fruits);
 
-//// to remove objects from certain indecis, use splice
+//// to remove objects from certain indices, use splice
 
 fruits.splice(0,1);
 console.log(fruits);
@@ -2091,7 +2093,7 @@ console.log(numbers); //// this will not sort it properly
 //// due to sorting lexicographically, the result will be :
 //// [1, 10, 2, 3, 4, 5, 6, 8, 9], as each treated as string
 
-//// to sort numbers, we have to follow a ceretain set of steps
+//// to sort numbers, we have to follow a certain set of steps
 //// we have to write a custom comparison function, inside the 
 //// sort() method, as a callback
 
@@ -2177,7 +2179,7 @@ console.log(date1);
 const date2 = new Date("2024-01-02T12:00:00Z");
 console.log(date2);
 
-//// also we can pass in given amount of time in miliseconds,
+//// also we can pass in given amount of time in milliseconds,
 ////  since epic (when the computer things time has begun)
 
 const date3 = new Date(1700000000000);
@@ -2248,26 +2250,26 @@ outer();
 
 //// Example of closures maintaining the state of a variable
 
-function increament(){
+function increment(){
 
     let count = 0;
     count++;
     console.log(`Count increased to ${count}`);
 }
 
-increament();
-increament();
+increment();
+increment();
 //// ......
-//// Every time we invoke increament, we are increamenting but we are also 
+//// Every time we invoke increment, we are incrementing but we are also 
 //// initializing the value of count.
 
-//// to maintain state , we can use closure while keeping the variuable secure
+//// to maintain state , we can use closure while keeping the variable secure
 
 function createCounter(){
 
     let count = 0;
 
-    function increament(){
+    function increment(){
         count++;
         console.log(`Count increased to ${count}`);
     }
@@ -2276,13 +2278,13 @@ function createCounter(){
         return count;
     }
 
-    return {increament:increament, getCount:getCount};
+    return {increment:increment, getCount:getCount};
 }
 
 const counter = createCounter();
-counter.increament();
-counter.increament();
-counter.increament();counter.increament();counter.increament();counter.increament();
+counter.increment();
+counter.increment();
+counter.increment();counter.increment();counter.increment();counter.increment();
 let currentCount = counter.getCount();
 console.log(`Current count: ${currentCount}`);
 
@@ -2368,4 +2370,24 @@ function clearTimer(){
 } */
 
 
-// ========================>>> 
+// ========================>>> ES6 Modules
+
+//// ES6 modules = An external file that contains reusable code
+////               that can be imported into other JavaScript files.
+////               Write reusable code for many different apps.
+////               Can contain variables, classes, functions.. and more
+////               Introduces as part of ECMAScript 2015 update
+
+import {getCircumference, PI, getArea, getVolume} from './mathUtil.js'
+
+console.log(PI);
+
+const circumference = getCircumference(10);
+console.log(`${circumference.toFixed(2)}cm`);
+
+const area = getArea(10);
+console.log(`${area.toFixed(2)} cm^2`);
+
+const volume = getVolume(10);
+console.log(`${volume.toFixed(2)} cm^3`);
+
