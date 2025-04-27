@@ -2446,7 +2446,7 @@ func1(func2); */
 
 // ========================>>> Error objects
 
-//// error = An object that is created to represent a problem that occurs 
+/* //// error = An object that is created to represent a problem that occurs 
 ////        Occurs often with user input or establishing a connection
 ////        Object created to represent a  problem
 
@@ -2513,7 +2513,5 @@ try {
     console.error(error);
 }
 
-console.log("You have reached the end");
-
-
+console.log("You have reached the end"); */
 
