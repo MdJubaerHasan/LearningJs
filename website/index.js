@@ -2372,7 +2372,7 @@ function clearTimer(){
 
 // ========================>>> ES6 Modules
 
-//// ES6 modules = An external file that contains reusable code
+/* //// ES6 modules = An external file that contains reusable code
 ////               that can be imported into other JavaScript files.
 ////               Write reusable code for many different apps.
 ////               Can contain variables, classes, functions.. and more
@@ -2389,5 +2389,59 @@ const area = getArea(10);
 console.log(`${area.toFixed(2)} cm^2`);
 
 const volume = getVolume(10);
-console.log(`${volume.toFixed(2)} cm^3`);
+console.log(`${volume.toFixed(2)} cm^3`); */
+
+
+
+// ========================>>> Synchronous & Asynchronous
+
+//// synchronous = Executes line by line consecutively  in a sequential manner
+////               Code that waits for an operation to complete.
+
+//// asynchronous = Allows multiple operations to be performed concurrently
+////                without waiting. Doesn't block the execution flow and allow
+////                the program to continue. This is used in I/O operations.
+////                network requests, fetching data ... anywhere there is a need
+////                for indefinite time of execution. 
+////                Handled with : Callbacks, Promises, Async/Await
+
+
+//// synchronous code:
+
+console.log("Task 1");
+console.log("Task 2");
+console.log("Task 3");
+
+//// asynchronous code:
+
+setTimeout(() => console.log("Async Task 5"), 3000);
+
+/////////////////////////////////////////////
+
+console.log("Task 6");
+console.log("Task 7");
+console.log("Task 8");
+
+console.log("\n");
+console.log("\n");
+
+
+//// Handling asynchronous code
+
+function func1(callback){
+    setTimeout(() => {console.log("Asynchronous Task 1"); 
+                      callback();
+                     }, 4000);
+}
+
+function func2() {
+    console.log("Synchronous Task 1");
+    console.log("Synchronous Task 2");
+    console.log("Synchronous Task 3");
+}
+
+func1(func2);
+
+
+
 
