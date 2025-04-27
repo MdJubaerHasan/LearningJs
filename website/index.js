@@ -2395,7 +2395,7 @@ console.log(`${volume.toFixed(2)} cm^3`); */
 
 // ========================>>> Synchronous & Asynchronous
 
-//// synchronous = Executes line by line consecutively  in a sequential manner
+/* //// synchronous = Executes line by line consecutively  in a sequential manner
 ////               Code that waits for an operation to complete.
 
 //// asynchronous = Allows multiple operations to be performed concurrently
@@ -2440,8 +2440,80 @@ function func2() {
     console.log("Synchronous Task 3");
 }
 
-func1(func2);
+func1(func2); */
 
+
+
+// ========================>>> Error objects
+
+//// error = An object that is created to represent a problem that occurs 
+////        Occurs often with user input or establishing a connection
+////        Object created to represent a  problem
+
+
+//console.leg("Hello!");
+//// The above line will produce a TypeError
+//// Errors interrupt the flow of the program
+
+//console.log(x);
+//// The above line will throw Uncaught ReferenceError, since we did not define x
+
+//// Other possible errors : Network, Promise rejection, security etc ...
+
+
+//// We can Handle errors using the try {}, catch {} and finally {} blocks
+//// try {} = Encloses code that might potentially cause an error
+//// catch {} = Catch and handle any thrown Errors from try {}
+//// finally {} = (optional) Always executes. Used mostly for clean up
+////              Example: closes file, closes connections, releases resources etc..
+
+
+try {
+    console.log(x);
+    
+} catch (error) {
+    //// Gracefully handled error
+    //// for error, console.error is preferred, good for debugging
+    console.error(error);
+    
+}
+
+finally{
+    //// Closing files
+    //// Closing connections
+    //// Releasing resources
+    console.log("This always executes");
+    
+}
+
+
+
+//// Handling user input errors
+
+
+//// Potentially dangerous code, hence, surround with try {}
+
+try {
+    const dividend = Number(window.prompt("Enter a dividend")); //// the number being divided
+    const divisor = Number(window.prompt("Enter a divisor")); //// Number dividing by
+    
+    //// we can intentionally throw an error:
+    if (divisor == 0) {
+        throw new Error("You can't divide by zero!");
+        
+    }
+    if(isNaN(dividend) || isNaN(divisor)){
+        throw new Error("Values must be a number!");
+        
+    }
+    const result = dividend / divisor ;
+    console.log(result);
+
+} catch (error) {
+    console.error(error);
+}
+
+console.log("You have reached the end");
 
 
 
