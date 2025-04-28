@@ -2517,7 +2517,7 @@ console.log("You have reached the end"); */
 
 
 // ========================>>> DOM
-//// DOM = Document Object Model
+/* //// DOM = Document Object Model
 ////       Object{} that represents the page you see in the web
 ////       browser and provides you with an API to interact with it.
 ////       Web browser constructs the DOM when it load an HTML document.
@@ -2535,4 +2535,119 @@ console.dir(document);
 const username = "Bro code";
 
 const welcomeMsg = document.getElementById("welcome-msg");
-welcomeMsg.textContent += username === "" ? "Guest" : " " + username;
+welcomeMsg.textContent += username === "" ? "Guest" : " " + username; */
+
+
+
+// ========================>>> Element Selectors
+
+/* //// element selectors = Methods used to target and manipulate HTML elements
+////                     They allow you to select one or multiple HTML elements
+////                     from the DOM (Document Object Model)
+
+//// 1. document.getElementById() -> ELEMENT OR NULL
+//// 2. document.getElementsClassName() -> HTML COLLECTION
+//// 3. document.getElementsByTagName() -> HTML COLLECTION
+//// 4. document.querySelector() -> FIRST ELEMENT OR NULL
+//// 5. document.querySelectorAll() -> NODE LIST
+
+const myHeading = document.getElementById("my-heading");
+myHeading.style.backgroundColor = "yellow";
+myHeading.style.textAlign = "center";
+
+console.log(myHeading);
+
+console.dir(myHeading);
+
+const nullHeading = document.getElementById("my-heading-two");
+console.log(nullHeading);
+
+
+const fruits = document.getElementsByClassName("fruits");
+console.log(fruits);
+
+fruits[0].style.backgroundColor = "red";
+
+for (let fruit of fruits) {
+    fruit.style.backgroundColor = "yellow";
+}
+
+//// fruits.forEach(); -> This will produce an error as HTML collection
+////                     Does not provide a forEach method
+
+//// However, we can type cast it to an array and then use forEach()
+
+
+let fruitsArray  = Array.from(fruits);
+console.log(fruitsArray);
+
+Array.from(fruits).forEach(fruit => fruit.style.backgroundColor = "red");
+
+
+const h4Elements = document.getElementsByTagName("h4");
+console.log(h4Elements);
+
+h4Elements[1].style.backgroundColor = "Yellow";
+
+for (let h4Element of h4Elements) {
+    h4Element.style.backgroundColor = "red";
+}
+
+const listItemElements = document.getElementsByTagName("li");
+
+for(let liElement of listItemElements){
+    liElement.style.backgroundColor = "lightgreen";
+}
+
+Array.from(h4Elements).forEach(liElement => liElement.style.backgroundColor = "lightgreen");
+Array.from(listItemElements).forEach(liElements => liElements.style.backgroundColor = "red");
+
+
+//// QuerySelector -> selects only the first occurrence
+
+const classElement = document.querySelector(".fruits");
+classElement.style.backgroundColor = "lightgreen";
+
+const tagElement = document.querySelector("h4");
+tagElement.style.backgroundColor = "blue";
+
+const listItemElement = document.querySelector("li");
+listItemElement.style.backgroundColor = "pink";
+
+const unorderedListElement = document.querySelector("ul");
+unorderedListElement.style.backgroundColor = "orange"; 
+
+const orderedList = document.querySelector("ol"); //// will give null as it doesn't exist
+console.log(orderedList);
+
+
+
+//// QuerySelectorAll
+
+//// it is similar to HTML collections but it does provide built-in methods
+//// the methods are similar to array methods 
+
+//// Unlike HTML collections (which are live), Node-list (provided by QuerySelectorAll)
+//// is STATIC, meaning they do not update automatically in the DOM
+
+
+const allFruits = document.querySelectorAll(".fruits");
+
+allFruits[0].style.backgroundColor = "green";
+
+const allVegetables = document.querySelectorAll("li");
+
+console.log(allVegetables);
+
+allVegetables.forEach(vegetable => vegetable.style.backgroundColor = "green" );
+
+//// Why It Is STATIC :
+
+//// let boxes = document.querySelectorAll('.box'); // grabs 3 elements
+//// Then dynamically add another <div class="box"> to the DOM
+//// document.body.innerHTML += '<div class="box">New Box</div>';
+//// console.log(boxes.length); // Still 3, NOT 4
+//// let liveBox = document.getElementsByClassName('box');
+//// console.log(liveBox.length); /// will show 4 as it updates live */
+
+
