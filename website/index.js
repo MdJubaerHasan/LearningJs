@@ -2651,3 +2651,88 @@ allVegetables.forEach(vegetable => vegetable.style.backgroundColor = "green" );
 //// console.log(liveBox.length); /// will show 4 as it updates live */
 
 
+
+// ========================>>> DOM Navigation
+
+//// DOM Navigation = The process of navigating through the structure of an HTML
+////                  document using JavaScript
+
+//// .firstElementChild
+//// .lastElementChild
+//// .nextElementSibling
+//// .previousElementSibling
+//// .parentElement
+//// .children ... etc (more exists)
+
+
+const element = document.getElementById("fruits");
+const ulElements = document.querySelectorAll("ul");
+
+//// -----------    .firstElementChild  -----------
+
+
+
+const firstChild  = element.firstElementChild;
+
+firstChild.style.backgroundColor = "yellow";
+
+ulElements.forEach(ulElement => {
+    const firstChild = ulElement.firstElementChild;
+    firstChild.style.backgroundColor = "red";
+});
+
+
+//// -----------    .lastElementChild  -----------
+
+const lastChild  = element.lastElementChild;
+
+lastChild.style.backgroundColor = "yellow";
+
+ulElements.forEach(ulElement => {
+    const lastChild = ulElement.lastElementChild;
+    lastChild.style.backgroundColor = "pink";
+});
+
+
+//// -----------    .nextElementSibling  -----------
+
+const firstChildElement = document.getElementById("apple");
+const nextSibling = firstChildElement.nextElementSibling;
+nextSibling.style.backgroundColor = "yellow";
+
+const firstChild2 = document.getElementById("fruits");
+const nextSibling2 = firstChild2.nextElementSibling;
+nextSibling2.style.backgroundColor = "blue";
+
+
+//// -----------    .previousElementSibling  -----------
+
+const midChildElement = document.getElementById("orange");
+const prevSibling = midChildElement.previousElementSibling;
+prevSibling.style.backgroundColor = "orange";
+
+
+const midChildElement2 = document.getElementById("vegetables");
+const prevSibling2 = midChildElement2.previousElementSibling;
+prevSibling2.style.backgroundColor = "red";
+
+
+//// -----------    .parentElement  -----------
+
+const randomElement = document.getElementById("apple");
+const parent = randomElement.parentElement;
+
+parent.style.backgroundColor = "yellow";
+
+
+//// -----------    .children  -----------
+
+const parentElement = document.getElementById("fruits");
+
+const children = parentElement.children;
+
+console.log(children); //// returns HTML collection
+
+Array.from(children).forEach(element => element.style.backgroundColor = "teal");
+
+children[1].style.backgroundColor = "gray";
