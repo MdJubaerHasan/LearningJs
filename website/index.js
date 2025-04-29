@@ -2830,7 +2830,7 @@ document.body.removeChild(document.getElementById("fruits")); */
 
 // ========================>>> Mouse Events
 
-//// eventListener = Listen for specific events to create interactive
+/* //// eventListener = Listen for specific events to create interactive
 ////                 web pages. Events: click, mouseover, mouseout
 ////                 .addEventListener(event, callback)
 
@@ -2876,4 +2876,61 @@ myBox.addEventListener("mouseout", event => {
 myButton.addEventListener("click", event=>{
     myBox.style.backgroundColor = "red";
     myBox.textContent = "How Dare! 😒"
+}); */
+
+
+
+// ========================>>> Key Events
+
+/* //// eventListener = Listen for specific events to create interactive
+////                 web pages. Events: keydown, keyup
+////                 document.addEventListener(event, callback)
+
+
+const myBox = document.getElementById("myBox");
+
+const moveAmount = 10;
+let x = 0;
+let y = 0;
+
+
+
+document.addEventListener("keydown", event =>{
+    console.log(`Keydown = ${event.key}`);
+    myBox.textContent = "😱"
+    myBox.style.backgroundColor = "tomato";
+    
 });
+
+document.addEventListener("keyup", event =>{
+    console.log(`Keyup = ${event.key}`);
+    myBox.textContent = "😃"
+    myBox.style.backgroundColor = "lightblue";
+    
+});
+
+
+document.addEventListener("keydown", event =>{
+
+    event.preventDefault();
+
+    if (event.key.startsWith("Arrow")) {
+        switch(event.key){
+            case "ArrowUp":
+                y -= moveAmount;
+                break;
+            case "ArrowDown":
+                y += moveAmount;
+                break;
+            case "ArrowLeft":
+                x -= moveAmount;
+                break;
+            case "ArrowRight":
+                x += moveAmount
+                break;
+        }
+
+        myBox.style.top = `${y}px`;
+        myBox.style.left = `${x}px`;
+    }
+}); */
