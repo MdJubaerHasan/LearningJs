@@ -2742,7 +2742,7 @@ children[1].style.backgroundColor = "gray"; */
 // ========================>>> Add and Change HTML Elements 
 
 
-const box2 = document.getElementById("box2");
+/* const box2 = document.getElementById("box2");
 
 //// Steps:
 //// 1. Create the element
@@ -2824,4 +2824,56 @@ document.getElementById("fruits").removeChild(lastListItem);
 
 document.querySelectorAll("li").forEach(item => document.getElementById("fruits").removeChild(item));
 
-document.body.removeChild(document.getElementById("fruits"));
+document.body.removeChild(document.getElementById("fruits")); */
+
+
+
+// ========================>>> Mouse Events
+
+//// eventListener = Listen for specific events to create interactive
+////                 web pages. Events: click, mouseover, mouseout
+////                 .addEventListener(event, callback)
+
+
+//// click -> when we click on something
+//// mouseover -> when we hover over something
+//// mouseout -> when we leave something after hovering
+
+const myBox = document.getElementById("my-box");
+const myButton = document.getElementById("myBtn");
+
+function changeColor(event){
+    // console.log(event);
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "OUCH! 🫨"
+}
+//// *** event is an object provided to us by the browser
+//// it contains information about the event that occurred
+//// we do not need to pass-in the event explicitly inside the callback
+
+myBox.addEventListener("click", changeColor);
+myBox.addEventListener("click", function(event){
+    event.target.style.backgroundColor = "red";
+    event.target.textContent = "NOOO! 🫨"
+});
+
+myBox.addEventListener("click", event=>{
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "OUCH! 🫨"
+});
+
+myBox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "yellow";
+    event.target.textContent = "Don't! 😠"
+});
+
+myBox.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = "lightgreen";
+    event.target.textContent = "Click Me 😄"
+});
+
+
+myButton.addEventListener("click", event=>{
+    myBox.style.backgroundColor = "red";
+    myBox.textContent = "How Dare! 😒"
+});
