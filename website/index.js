@@ -2654,7 +2654,7 @@ allVegetables.forEach(vegetable => vegetable.style.backgroundColor = "green" );
 
 // ========================>>> DOM Navigation
 
-//// DOM Navigation = The process of navigating through the structure of an HTML
+/* //// DOM Navigation = The process of navigating through the structure of an HTML
 ////                  document using JavaScript
 
 //// .firstElementChild
@@ -2735,4 +2735,93 @@ console.log(children); //// returns HTML collection
 
 Array.from(children).forEach(element => element.style.backgroundColor = "teal");
 
-children[1].style.backgroundColor = "gray";
+children[1].style.backgroundColor = "gray"; */
+
+
+
+// ========================>>> Add and Change HTML Elements 
+
+
+const box2 = document.getElementById("box2");
+
+//// Steps:
+//// 1. Create the element
+
+const newH1 = document.createElement("h1");
+const secondH1 = document.createElement("h1");
+const thirdH1 = document.createElement("h1");
+const lastH1 = document.createElement("h1");
+
+
+//// 2. Add attributes/properties
+
+newH1.textContent = "I have been appended";
+secondH1.textContent = "I have been prepended";
+thirdH1.textContent = "Middle Baby";
+lastH1.textContent = "Last Child";
+newH1.id = "myH1";
+newH1.style.color = "tomato";
+newH1.style.textAlign = "center";
+thirdH1.style.color = "pink";
+thirdH1.style.textAlign = "center";
+
+//// 3. Append element to DOM
+
+document.body.prepend(secondH1);
+document.body.append(newH1);
+document.getElementById("box4").append(newH1);
+document.getElementById("box2").prepend(secondH1);
+
+document.body.insertBefore(thirdH1, box2);
+
+
+//// If they did not have id(s), we could use querySelectorAll
+
+const boxes = document.querySelectorAll(".box");
+document.body.insertBefore(lastH1, boxes[3]);
+
+//// 4. Remove the element
+
+document.body.removeChild(lastH1);
+document.getElementById("box2").removeChild(secondH1);
+document.body.removeChild(thirdH1);
+document.getElementById("box4").removeChild(newH1);
+
+boxes.forEach(box => document.body.removeChild(box));
+
+//// Example 2
+
+const newListItem = document.createElement("li");
+newListItem.textContent = "coconut";
+newListItem.id = "coconut";
+newListItem.style.fontWeight = "bold";
+newListItem.style.backgroundColor = "pink";
+
+const middleListItem = document.createElement("li");
+middleListItem.textContent = "passion fruit";
+middleListItem.id = "coconut";
+middleListItem.style.fontWeight = "bold";
+middleListItem.style.backgroundColor = "green";
+
+
+const lastListItem = document.createElement("li");
+lastListItem.textContent = "raspberry";
+lastListItem.id = "raspberry";
+lastListItem.style.backgroundColor = "red";
+
+
+document.getElementById("fruits").append(newListItem);
+
+document.getElementById("fruits").insertBefore(middleListItem, document.getElementById("orange"));
+
+//// what if the fruits did not have id(s)?
+
+const fruits = document.querySelectorAll("#fruits li");
+console.log(fruits);
+document.getElementById("fruits").insertBefore(lastListItem, fruits[4]);
+
+document.getElementById("fruits").removeChild(lastListItem);
+
+document.querySelectorAll("li").forEach(item => document.getElementById("fruits").removeChild(item));
+
+document.body.removeChild(document.getElementById("fruits"));
