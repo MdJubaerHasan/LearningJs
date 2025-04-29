@@ -3171,7 +3171,7 @@ task1(() => {
 
 // ========================>>> Promise
 
-//// promise = An object that manages asynchronous operations.
+/* //// promise = An object that manages asynchronous operations.
 ////           Wrap a Promise object around {asynchronous code}
 ////           "I Promise to return a value"
 ////           PENDING -> RESOLVED OR REJECTED
@@ -3271,5 +3271,88 @@ function takeOutTrash(){
 walkDog().then(value => {console.log(value); return cleanTheKitchen();})
          .then(value => {console.log(value); return takeOutTrash();})
          .then(value => {console.log(value); console.log("All Task Completed ✅");})
-         .catch(error => console.error(error));
-         
+         .catch(error => console.error(error)); */
+
+
+
+
+// ========================>>> Async / Await
+
+//// async = makes a function return a promise
+//// await = makes an async function wait for a promise
+
+////         Allows you to write asynchronous code in a synchronous manner
+////         Async doesn't have a resolve or reject parameter 
+////         Everything after Await is placed in an event queue
+
+function walkDog(){
+    
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dogWalked = false;
+
+            if (dogWalked) {
+                resolve("You walked the dog 🐕‍🦺");
+            } else {
+                reject("You did not walk the dog 🐕‍🦺");
+            }
+            
+        }, 1500);
+    });
+}
+
+function cleanTheKitchen(){
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const kitchenCleaned = true;
+            
+            if (kitchenCleaned) {
+                resolve("You cleaned the kitchen 🧹");
+            } else {
+                reject("You did not clean the kitchen 🧹")
+            }
+            
+        }, 2500);
+    });
+}
+
+function takeOutTrash(){
+    
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const tookOutTrash = true;
+
+            if (tookOutTrash) {
+                resolve("You took out the trash 🗑️");
+            } else {
+                reject("You dod not take out the trash 🗑️")
+            }
+            
+        }, 500);
+    });
+    
+}
+
+async function doChores() {
+
+    try{
+        const walkDogResolved = await walkDog();
+        console.log(walkDogResolved);
+
+        const cleanKitchenResult = await cleanTheKitchen();
+        console.log(cleanKitchenResult);
+
+        const takeOutTrashResult = await takeOutTrash();
+        console.log(takeOutTrashResult);
+
+        console.log("You finished all the chores! Have a candy 🍬");
+    }catch(error){
+        console.error(error);
+    }
+    
+    
+}
+
+doChores()
