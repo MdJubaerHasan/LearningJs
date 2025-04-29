@@ -3358,7 +3358,7 @@ doChores(); */
 
 // ========================>>> JSON 
 
-//// JSON = (JavaScript Object Notation) data-interchanging format
+/* //// JSON = (JavaScript Object Notation) data-interchanging format
 ////        Used for exchanging data between a server and a web application
 ////        JSON files {key:value} OR [value1, value2, value3]
 
@@ -3449,4 +3449,74 @@ fetch("names.json")
 fetch("people.json")
     .then(response => response.json())
     .then(values => values.forEach(value => console.log(value)))
-    .catch(error => console.error(error));
+    .catch(error => console.error(error)); */
+
+
+
+// ========================>>> Fetch
+
+/* //// fetch = Function used for making HTTP requests to fetch resources
+////         (JSON style data, images, files)
+////         Simplifies asynchronous data fetching in JavaScript and
+////         used for interacting with APIs to retrieve and send data
+////         asynchronously over the web. fetch(url, {object of options})
+//// {object of options} -> example: {method: "GET"} to get some data, this is default
+////                                 {method: "POST"} to send some data
+////                                 {method: "PUT"} to replace some data
+////                                 {method: "DELETE"} to delete some data
+
+//// HTTP status codes :
+//// Informational responses 100 - 199
+//// Successful responses    200 - 299
+//// Redirection responses   300 - 399
+//// Client error responses  400 - 499
+//// Server error responses  500 - 599
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+// .then(response => response.json())
+// .then(data => console.log(data.id))
+// .catch(error => console.error(error));
+
+// fetch("https://pokeapi.co/api/v2/pokemon/spongebob")
+// .then(response => {
+//     if(!response.ok){
+//         throw new Error("Could not fetch resource");
+//     }
+//     return response.json();
+// })
+// .then(data => console.log(data.id))
+// .catch(error => console.error(error));
+
+
+//// using async/await
+
+async function fetchData() {
+    try {
+        const pokemonName = document.getElementById("pokemon-name").value.toLowerCase();
+
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+
+        if (!response.ok) {
+            throw new Error("Could not get your pokemon!");
+        }
+
+        const data = await response.json();
+        console.log(data);
+        const pokemonSprite = data.sprites.front_default;
+        const imageElement = document.getElementById("pokemon-sprite");
+        imageElement.src = pokemonSprite;
+        imageElement.style.display = "block";
+        imageElement.style.width = "300px";
+        imageElement.style.height = "300px";        
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+//// Reason for this is your <script> tag has type="module",
+//// which means all functions inside it are scoped locally 
+//// by default — they’re not attached to the global window object, 
+//// so onclick="fetchData()" in your HTML doesn't know where to find it.
+//// hence we have to Expose fetchData to HTML
+window.fetchData = fetchData; */
