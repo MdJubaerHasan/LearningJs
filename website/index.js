@@ -3278,7 +3278,7 @@ walkDog().then(value => {console.log(value); return cleanTheKitchen();})
 
 // ========================>>> Async / Await
 
-//// async = makes a function return a promise
+/* //// async = makes a function return a promise
 //// await = makes an async function wait for a promise
 
 ////         Allows you to write asynchronous code in a synchronous manner
@@ -3350,9 +3350,103 @@ async function doChores() {
         console.log("You finished all the chores! Have a candy 🍬");
     }catch(error){
         console.error(error);
-    }
-    
-    
+    }   
 }
 
-doChores()
+doChores(); */
+
+
+// ========================>>> JSON 
+
+//// JSON = (JavaScript Object Notation) data-interchanging format
+////        Used for exchanging data between a server and a web application
+////        JSON files {key:value} OR [value1, value2, value3]
+
+////        JSON.stringify() = converts a JS object to JSON string
+////        JSON.parse() = converts a JSON string to a JS object
+
+const names = ["Spongebob", "Patrick", "Squidward", "Sandy"];
+
+const jsonStringName = JSON.stringify(names);
+console.log(names);
+console.log(jsonStringName);
+
+const person = {
+    "name": "Spongebob",
+    "age": 30,
+    "isEmployed": true,
+    "hobbies": ["Jellyfishing", "Karate", "Cooking"]
+}
+
+console.log(person);
+
+const jsonStringPerson = JSON.stringify(person);
+console.log(jsonStringPerson);
+
+
+const people = [
+    {
+        "name": "Spongebob",
+        "age": 30,
+        "isEmployed": true
+    },
+    {
+        "name": "Patrick",
+        "age": 34,
+        "isEmployed": false
+    },
+    {
+        "name": "Squidward",
+        "age": 50,
+        "isEmployed": true
+    },
+    {
+        "name": "Sandy",
+        "age": 27,
+        "isEmployed": false
+    }
+];
+
+console.log(people);
+
+const jsonStringPeople = JSON.stringify(people);
+console.log(jsonStringPeople);
+
+
+//// Parse 
+
+
+const jsonNames = `["Spongebob", "Patrick", "Squidward", "Sandy"]`;
+const jsonPerson = `{"name": "Spongebob","age": 30,"isEmployed": true,"hobbies": ["Jellyfishing", "Karate", "Cooking"]}`;
+const jsonPeople = `[  {"name": "Spongebob","age": 30,"isEmployed": true},
+                       {"name": "Patrick","age": 34,"isEmployed": false},
+                       {"name": "Squidward","age": 50,"isEmployed": true},
+                       {"name": "Sandy","age": 27,"isEmployed": false}]`;
+
+
+console.log(jsonNames);
+const parsedNames = JSON.parse(jsonNames);
+console.log(parsedNames);
+
+console.log(jsonPerson);
+const parsedPerson = JSON.parse(jsonPerson);
+console.log(parsedPerson);
+
+console.log(jsonPeople);
+const parsedPeople = JSON.parse(jsonPeople);
+console.log(parsedPeople);
+
+//// fetch()
+//// .json() converts to JSON format
+fetch("person.json")
+    .then(response => response.json())
+    .then(value => console.log(value));
+
+fetch("names.json")
+    .then(response => response.json())
+    .then(value => console.log(value));
+
+fetch("people.json")
+    .then(response => response.json())
+    .then(values => values.forEach(value => console.log(value)))
+    .catch(error => console.error(error));
